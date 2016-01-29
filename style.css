@@ -92,8 +92,8 @@ img[ alt="GitHub"]{
     float: left;
     text-align: left;
 }
-.menu, .contact, .section{
-    border-radius: 4px;
+.menu, .contact, .section, .page1{
+    border-radius: 5px;
     overflow: hidden;
 }
 .menu {
@@ -242,18 +242,20 @@ a[href^="skype:"] div {
     padding-bottom: 10px;
     padding-left: 124px;
     background-repeat: no-repeat;
-    background-position: 56px 4.6px;
     font-family: "FiraSans Ligth";
     font-size: 15.6px;
 }
 .work{
-    background-image: url(image/work.png);
+    background-image: url(image/work.png);   
+    background-position: 56px 4.6px;
 }
 .learn{
-    background-image: url(image/learn.png);
+    background-image: url(image/learn.png);   
+    background-position: 54px 6.6px;
 }
 .list{
     background-image: url(image/list.png);
+    background-position: 60px 5.6px;
 }
 .example {
    display: inline-block;
@@ -314,10 +316,10 @@ a[href^="skype:"] div {
 #project{
     color: #f2f6fa;
     background-color: #3d8eb9;
-    border-bottom: 6px solid #3ba8c0;
-    font-size: 27px;
+    border-bottom: 16px solid #3ba8c0;
+    font-size: 26.1px;
     align-items: center;
-    padding: 6px 30px;
+    padding: 42px 0 38px 60px;
 }
 .enter{
     display: inline-block;
@@ -328,23 +330,27 @@ a[href^="skype:"] div {
     margin: 12px;
 }
 #Fio,#Email,#Message,#capchaImage,#capcha{
+    display: block;
     border-radius: 3px;
-    border: thin solid #3ba8c0;  
+    border: thin solid #48cbe8;  
     font-family: "FiraSans Ligth";
-    color: #3ba8c0;
-    font-size: 13px;
+    color: #48cbe8;
+    font-size: 14px;
+    align-content: flex-start;
+    padding-left: 8px;
+    margin-top: 4px;
 }
 #Fio{
-    height: 42px;
-    width: 193px;
+    height: 41px;
+    width: 192px;
 }
 #Email{
-    height: 42px;
-    width: 195px;
+    height: 41px;
+    width: 193px;
 }
 #Message{
-    height: 185px;
-    width: 403px;
+    height: 183px;
+    width: 402px;
 }
 #capchaImage{
     height: 80px;
@@ -358,17 +364,19 @@ a[href^="skype:"] div {
 }
 #Submit,#clear{
     border-radius: 5px;
+    border-width: 0;
     height: 34px;
     padding: 0 22px;
     color: #f2f6fa;
     font-size: 19px;
-    box-shadow: inside 0px -4px 0px 0px rgba(0,0,0,0.4);
+    box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.2);
+    transition: all 0.2s ease 0s;
 }
 #Submit:hover,#clear:hover{
     box-shadow: none;
 }
 #Submit:active,#clear:active{
-    box-shadow: inside 0px 4px 0px 0px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.2);
 }
 #Submit{
     background-color: #48cbe8;

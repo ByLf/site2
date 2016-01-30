@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="wrap">
+   <div class="wrap clearfix">
       <header class="header">
        <img src="image/logo.png" alt="">
         <a href="" class="logo">
           <img src="image/logo1.png" alt="LoftSchool">
          </a>
-        <div class="soc_net">
-            <a href=""><img src="image/SocNet.png" alt="Вконтакте"></a>
-            <a href=""><img src="image/SocNet.png" alt="Twitter"></a>
-            <a href=""><img src="image/SocNet.png" alt="Facebook"></a>
-            <a href=""><img src="image/SocNet.png" alt="GitHub"></a>
-        </div>
+        <ul class="soc_net">
+            <li><a href="" class="vk"><div>Вконтакте</div></a></li>
+            <li><a href="" class="tw"><div>Twitter</div></a></li>
+            <li><a href="" class="fb"><div>Facebook</div></a></li>
+            <li><a href="" class="gh"><div>GitHub</div></a></li>
+        </ul>
          <!--[if gte IE 8]>
              <div class="gradient"></div>
          <![endif]-->
@@ -32,7 +32,7 @@
               </style>
         <![endif]-->
     </header>
-      <div class="wrapper">
+      <div class="wrapper clearfix">
         <aside class="aside">
             <div class="menu">
                 <ul>
@@ -42,8 +42,8 @@
                 </ul>
             </div>
             <div class="contact">
+                 <div class="cont_ul">Контакты</div>
                 <ul>
-                    <li><div>Контакты</div></li>
                     <li><a href="malito:pochta@mail.ru"><div></div>pochta@mail.ru</a></li>
                     <li><a href="tel:+79812342323"><div></div>+79812342323</a></li>
                     <li><a href="skype:nickname"><div></div>nickname</a></li>
@@ -53,45 +53,44 @@
         </aside>
         <div class="content">
             <section class="section">
-                <h1 class="main">Основная информация</h1>
-                <img src="image/male.jpg" alt="Фотография" class="photo">
+                <h2 class="main">Основная информация</h2>
+                <div class="photo"><img src="image/male.jpg" alt="Фотография"></div> 
                 <ul>
-                    <li><b class="b">Меня зовут: </b>Иванов Андрей Степанович</li>
-                    <li><b class="b">Мой возраст: </b>25 лет</li>
-                    <li><b class="b">Мой город: </b>Санкт-Петербург, Россия</li>
-                    <li><b class="b">Моя специализация: </b>FRONTEND разработчик</li>
-                    <li><b class="b">Ключевые навыки:</b>
-                      <div class="Skil">
-                        <span class="skils">html</span>
-                        <span class="skils">css</span>
-                        <span class="skils">javascript</span>
-                        <span class="skils">gulp</span>
-                        <span class="skils">git</span>
-                      </div>
+                    <li><span class="b">Меня зовут: </span>Иванов Андрей Степанович</li>
+                    <li><span class="b">Мой возраст: </span>25 лет</li>
+                    <li><span class="b">Мой город: </span>Санкт-Петербург, Россия</li>
+                    <li><span class="b">Моя специализация: </span>FRONTEND разработчик</li>
+                    <li><span class="b">Ключевые навыки:</span>
+                      <ul class="Skil">
+                        <li class="skils">html</li>
+                        <li class="skils">css</li>
+                        <li class="skils">javascript</li>
+                        <li class="skils">gulp</li>
+                        <li class="skils">git</li>
+                      </ul>
                      </li>
                 </ul>
             </section>
             <section class="section">
                 <h1 class="main">Опыт работы</h1>
                 <ul>
-                    <li class="work"><b class="info">"ИП Боровицкий" - Продавец дисков </b>Сентябрь 2005 - Август 2008</li>
-                    <li class="work"><b class="info">"ООО Системы безопастности" - Системный администратор </b>Июнь 2008 - Июль 2010</li>
+                    <li class="work"><span class="info">"ИП Боровицкий" - Продавец дисков </span>Сентябрь 2005 - Август 2008</li>
+                    <li class="work"><span class="info">"ООО Системы безопастности" - Системный администратор </span>Июнь 2008 - Июль 2010</li>
                 </ul>
             </section>
             <section class="section">
                 <h1 class="main">Образование</h1>
                 <ul>
-                    <li class="learn"><b class="info">Незаконченное высшее. СПБГУ ИТМО </b>Октябрь 2012 - по настоящее время</li>
-                    <li class="list"><b class="info">Курсы Loftschool.ru </b>Ноябрь 2014 - по настоящее время</li>
+                    <li class="learn"><span class="info">Незаконченное высшее. СПБГУ ИТМО </span>Октябрь 2012 - по настоящее время</li>
+                    <li class="list"><span class="info">Курсы Loftschool.ru </span>Ноябрь 2014 - по настоящее время</li>
                 </ul>
             </section>
         </div>
     </div>
-        <div heigth="80px"></div>
     </div>
     <footer class="footer">
         <a href="" id="lock"></a>
-        <div>© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+        © 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
     </footer>
 </body>
 </html>

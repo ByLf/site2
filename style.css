@@ -3,9 +3,6 @@
     text-decoration: none;
     list-style-type: none;
 }
-b{
-    font-weight: normal;
-}
 ul{
     margin: 0;
     padding: 0;
@@ -14,17 +11,29 @@ html{
     background: url(image/comppattern2.png);
     font-family: 'FiraSans Book', sans-serif;
 }
+html,body{
+    height: 100%;
+    margin: 0;
+}
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
 h1,h2,h3,h4,h5,h6,h7{
     margin: 0;
 }
 .header, .footer {
     background-color: #eff3f7;
-    position: relative;
     width: 100%;
 }
 .header:after, .footer:before {
     content: " ";
     display: block;
+    position: absolute;
     width: 100%;
     height: 3px;
     margin: 0;  
@@ -44,6 +53,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     height: 117px;
     padding-top: 35px;
     padding-left: 99px;
+    margin-bottom: 39px;
 }
 .logo {
     display: inline-block;
@@ -60,7 +70,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     float: right;
     margin-right: 113px;
 }
-.soc_net a{
+.soc_net li{
     display: inline-block;
     height: 46px;
     width: 46px;
@@ -69,26 +79,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     overflow: hidden;
     margin-left: 21px;
 }
-.soc_net a:hover {
+.soc_net li:hover {
     background-color: #3ba8c0;
 }
-img[ alt="Twitter"]{
-    margin-left: -46px;
+.soc_net a{
+    background-image: url(image/SocNet.png);
+    display: block;
+    width: 100%;
+    height: 100%;
+    target:'_blank';
 }
-img[ alt="Facebook"]{
-    margin-left: -94px;
+.tw{
+    background-position: -46px;
 }
-img[ alt="GitHub"]{
-    margin-left: -138px;
+.fb{
+    background-position: -94px;
 }
+.gh{
+    background-position: -138px;
+}
+.soc_net div{
+    position: absolute;
+    margin-top: -150px;
+}
+
 .wrapper{
     width: 960px;
-    position: relative;
-    margin: 39px auto;
+    margin: 0px auto;
 }
+
 .aside{
     width: 250px;
-    display: inline-block;
     float: left;
     text-align: left;
 }
@@ -104,13 +125,15 @@ img[ alt="GitHub"]{
     background-color: #eff3f7;
     color: #58697a;
     font-size: 21px;
-    padding: 17.5px 20px 16.5px 27px;
-    border-bottom: 2.5px solid #eff3f7;
-    border-top: 2.5px solid #eff3f7;
+    padding: 20px 20px 16.5px 27px;
+    border-bottom: 2.5px solid #3ba8c0;
 }
 .menu a:hover {
     color:#3ba8c0;
-    border-color: #3ba8c0;
+}
+.menu li:last-child a{
+    border: none;
+    padding-bottom: 19px;
 }
 .menu div{
     background-color: #3ba8c0;
@@ -164,16 +187,10 @@ a[href^="skype:"] {
 a[href^="skype:"] div {    
     background-position: -3px -65px;
 }
+
 .content{
     width: 650px;
-    display: inline-block;
     float: right;
-    position: relative;
-}
-.page1{
-   height: 100%;
-   width: 100%; 
-   background-color: #eff3f7;
 }
 .section{
     display: block;
@@ -188,15 +205,10 @@ a[href^="skype:"] div {
     margin: 3px 0 0px 0;
     padding: 12px 0px 0px 0;
 }
-.Skil {
-    display: inline-block;
-    float: right; 
-    width: 198px;
-    margin-top: 10.5px;
-    margin-left: 2px;
-}
 .main{
-    padding: 12px 47px 13px 21px;
+    display: inline-block;
+    margin-right: 250px;
+    padding: 12px 25px 13px 21px;
     border-bottom: 2.5px solid #3ba8c0;
     color: #3ba8c0;
     font-size: 26px;
@@ -207,15 +219,27 @@ a[href^="skype:"] div {
     overflow: hidden;
     border-radius: 50%;
     border-color: #1c667a;
-    border-width: 2.5px;
+    border-width: 12.5px;
     margin: 35px 20px 30px 57px;
     width: 150px;
+    height: 150px;
+    // border не работает. странно.
+}
+.photo img {
+    width: 100%;
 }
 .b{
     display:inline-table;
     margin: 2.5px 18px 3.5px 0;
     font-family: 'FiraSans Medium';
     font-size: 17.1px;
+}
+.section .Skil {
+    display: inline-block;
+    float: right; 
+    width: 198px;
+    margin-top: 0px;
+    margin-left: 2px;
 }
 .skils{
    display: inline-block;
@@ -232,7 +256,7 @@ a[href^="skype:"] div {
 .info{
     display: block;
     font-family: 'FiraSans Book';
-    font-size: 17px;
+    font-size: 16.4px;
     margin-bottom: -4px;
     
 }
@@ -257,12 +281,19 @@ a[href^="skype:"] div {
     background-image: url(image/list.png);
     background-position: 60px 5.6px;
 }
+
+.page1{
+   height: 100%;
+   width: 100%; 
+   background-color: #eff3f7;
+}
 .example {
    display: inline-block;
    width: 182px;
    margin: 28px 6px 8px 20px;
    font-size: 14px;
    text-align: center;
+   vertical-align: top;
 }
 .block{
     display: block;
@@ -302,13 +333,15 @@ a[href^="skype:"] div {
     border: 2px dashed #3d8eb9;
     color: #3d8eb9;
     font-size: 13px;
-    padding: 0px;
+    margin: 28px 6px 8px 20px;
     text-align: center;
+    vertical-align: top;
 }
 #newproject>img{
     display: block;
     justify-content: center;
 }
+
 .page3{
     width: 403px;
     margin: 30px auto;
@@ -386,23 +419,30 @@ a[href^="skype:"] div {
     background-color: #849db5;
     float: right;
 }
+
 .wrap {
-    min-height: 100%;
-    position: relative;
+    min-height: 100%; 
+    margin-bottom: -80px;
+}
+.wrap:after {
+    content: '';
+    display: block;
+    height: 80px;
+    margin-top: 39px;
 }
 .footer{
     height: 77px;
     font-family: 'FiraSans Ligth';
-    font-size: 13px;
-    position: relative;
-    clear: both;
-    margin-top: -77px;
-    align-items: center;
+    font-size: 14.1px;
+    padding-top: 2px;
+    text-align: center; 
 }
 #lock{
-    display: inline-block;
+    float: left;
     width: 20px;
     height: 34px;
     background-image: url(image/lock.png);
+    margin: 0px 230px 1px 2px;
+    position: relative;
 }
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1c667a+0,f6fafe+0,d8d8d8+0,f2f6fa+0,87aeba+28,1c667a+48,87aeba+71,f2f6fa+100 */

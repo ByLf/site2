@@ -25,6 +25,7 @@ visibility: hidden;
 
 h1,h2,h3,h4,h5,h6,h7{
     margin: 0;
+    font-weight: normal;
 }
 .header, .footer {
     background-color: #eff3f7;
@@ -33,10 +34,10 @@ h1,h2,h3,h4,h5,h6,h7{
 .header:after, .footer:before {
     content: " ";
     display: block;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 3px;
-    margin: 0;  
+    margin: 0;
     background: #1c667a; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjNjY3YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjZmYWZlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkOGQ4ZDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjZmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iIzg3YWViYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iIzFjNjY3YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iIzg3YWViYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMmY2ZmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -48,12 +49,12 @@ background: -ms-linear-gradient(left,  #1c667a 0%,#f6fafe 0%,#d8d8d8 0%,#f2f6fa 
 background: linear-gradient(to right,  #1c667a 0%,#f6fafe 0%,#d8d8d8 0%,#f2f6fa 0%,#87aeba 28%,#1c667a 48%,#87aeba 71%,#f2f6fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', endColorstr='#f2f6fa',GradientType=1 ); /* IE6-8 */
 
-}
+} /*error not found. к футеру нельзя применять clearfix: градиент совсем исчезает*/
 .header {
     height: 117px;
     padding-top: 35px;
     padding-left: 99px;
-    margin-bottom: 39px;
+    margin-bottom: 42px;
 }
 .logo {
     display: inline-block;
@@ -63,42 +64,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-left: 9px;
     
 }
-.logo:hover {
-    z-index: -1;
+.Logo{ transition: all 2s ease 0s;}/*плавное выделение*/
+.Logo:hover {
+    opacity: 0;
+    transition: all 2s ease 0s;
 }
 .soc_net{
     float: right;
     margin-right: 113px;
 }
-.soc_net li{
+.soc_network {
     display: inline-block;
+}
+.vk, .tw, .fb, .gh{
+    background-image: url(image/sprite.png);
+    display: block;
     height: 46px;
     width: 46px;
-    border-radius: 50%;
     background-color: #58697a;
-    overflow: hidden;
     margin-left: 21px;
-}
-.soc_net li:hover {
-    background-color: #3ba8c0;
-}
-.soc_net a{
-    background-image: url(image/SocNet.png);
-    display: block;
-    width: 100%;
-    height: 100%;
     target:'_blank';
 }
-.tw{
-    background-position: -46px;
-}
-.fb{
-    background-position: -94px;
-}
-.gh{
-    background-position: -138px;
-}
-.soc_net div{
+.vk:hover, .tw:hover, .fb:hover, .gh:hover{background-color: #3ba8c0;}
+.vk{background-position: 5px 4px;}
+.tw{background-position: -43px 4px;}
+.fb{background-position: -90px 4px;}
+.gh{background-position: -134px 4px;}
+.social_net{
     position: absolute;
     margin-top: -150px;
 }
@@ -107,85 +99,86 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     width: 960px;
     margin: 0px auto;
 }
+.menu, .contact, .section, .page1{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.vk, .tw, .fb, .gh, .photo{
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 .aside{
     width: 250px;
     float: left;
     text-align: left;
 }
-.menu, .contact, .section, .page1{
-    border-radius: 5px;
-    overflow: hidden;
-}
 .menu {
     margin-bottom: 24px;
 }
-.menu a{
+.nav{
     display: block;
     background-color: #eff3f7;
     color: #58697a;
     font-size: 21px;
-    padding: 20px 20px 16.5px 27px;
-    border-bottom: 2.5px solid #3ba8c0;
+    padding: 17.5px 20px 19px 27px;
+    border-top: 2.5px solid #3ba8c0;
 }
-.menu a:hover {
+.nav:hover {
     color:#3ba8c0;
 }
-.menu li:last-child a{
+.menu li:first-child .nav{
     border: none;
     padding-bottom: 19px;
-}
-.menu div{
+}/* я не знаю как иначе найти первый элемент в списке.
+возможно, можно сделать немного по другому, например стилизовать li, и отдать области ссылки всю внутреннюю область*/
+.now{
     background-color: #3ba8c0;
     color: white;
     padding: 21px 20px 16px 27px;
     font-size: 23px;
 }
-.contact div {
+.cont_h {
     background-color: #3ba8c0;
     padding: 7px 30px 0 19px;
     color: white;
     font-size: 21px;
 }
-.contact a{
+.malito, .tel, .skype{
     display: block;
     padding: 6px 20px 7px 41px;
     font-size: 17px;
     color: white;
 }
-.contact a:hover{
+.malito:hover, .tel:hover, .skype:hover{
     text-decoration: underline;
     padding-top: 4px;
 }
-.contact a>div{
+.malito:before, .tel:before, .skype:before{
+    content: " ";
+    display: block;
     float: left;
-    padding: 0;
     height: 25px;
     width: 25px;
     overflow: hidden;
     background-color: transparent;
-    background-image: url(image/contact.png);
-    background-repeat: no-repeat;
     margin-right: 16px;
-}
-a[href^="malito:"] {
-    background-color: #41b9d4;   
-}
-a[href^="malito:"] div {
-    background-position: -4px 3px;
+}/*Любопытно: при установке display: inline-block; текст прескакивает на новую строку. даже если обнулить границы */
+.malito{background-color: #41b9d4;} /*Кажется, такая ссылка у меня не работает. Быть может, это из-за того, что я не использую почтовых клиентов*/
+.malito:before{
+    background-image: url(image/sprite.png);
+    background-position: 76px 96px;
     
 }
-a[href^="tel:"] {
-    background-color: #48cbe8;
+.tel{background-color: #48cbe8;}
+.tel:before{
+    background-image: url(image/sprite.png);
+    background-position: 78px 62px;
 }
-a[href^="tel:"] div {    
-    background-position: -3px -30px;
-}
-a[href^="skype:"] {
-    background-color: #51daf8;
-}
-a[href^="skype:"] div {    
-    background-position: -3px -65px;
+.skype{background-color: #51daf8;}
+.skype:before{
+    background-image: url(image/sprite.png);
+    background-position: 77px 29px;
 }
 
 .content{
@@ -200,10 +193,9 @@ a[href^="skype:"] div {
     margin-bottom: 27px;
     font-size: 15px;
 }
-.section ul{
-    display: inline-block;
-    margin: 3px 0 0px 0;
-    padding: 12px 0px 0px 0;
+.about_me{
+    margin-top: 10px;
+    padding: 2px;
 }
 .main{
     display: inline-block;
@@ -211,41 +203,42 @@ a[href^="skype:"] div {
     padding: 12px 25px 13px 21px;
     border-bottom: 2.5px solid #3ba8c0;
     color: #3ba8c0;
-    font-size: 26px;
+    font-size: 27px;
 }
 .photo{
     display: inline-block;
     float: left;
-    overflow: hidden;
-    border-radius: 50%;
-    border-color: #1c667a;
-    border-width: 12.5px;
+    border: 6px solid #3ba8c0;
     margin: 35px 20px 30px 57px;
     width: 150px;
     height: 150px;
-    // border не работает. странно.
+    /* border не работает. странно.! не забывать указывать тип границы.*/
 }
-.photo img {
+.photo_into{
     width: 100%;
-}
-.b{
+} /*Стоит подумать как хоошенько оцентрировать его, сохраняя это свойство */
+.about_me_line{
     display:inline-table;
     margin: 2.5px 18px 3.5px 0;
     font-family: 'FiraSans Medium';
     font-size: 17.1px;
 }
-.section .Skil {
+.about_me_answer{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.Skil {
     display: inline-block;
     float: right; 
     width: 198px;
-    margin-top: 0px;
-    margin-left: 2px;
+    margin-top: 8px;
 }
 .skils{
    display: inline-block;
    font-family: "ProximaNovaCond Semibold";
    font-size: 14px;
-   padding: 1px 14px 2px 14px;
+   padding: 1px 14px 1px 14px;
    border-radius: 2px;
    margin-right: 4px;
    color: white;
@@ -261,31 +254,60 @@ a[href^="skype:"] div {
     
 }
 .list,.learn,.work {
+    font-weight: normal;
     margin-top: 6px;
     padding-top: 0px;
     padding-bottom: 10px;
-    padding-left: 124px;
-    background-repeat: no-repeat;
+    padding-left: 56px;
     font-family: "FiraSans Ligth";
-    font-size: 15.6px;
+    font-size: 16px;
 }
-.work{
-    background-image: url(image/work.png);   
-    background-position: 56px 4.6px;
+.work:before{
+    content: " ";
+    overflow: hidden;
+    display: block;
+    float: left;
+    margin-right: 30px;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    background-image: url(image/sprite.png);
+    background-position: -5px -117px;
 }
-.learn{
-    background-image: url(image/learn.png);   
-    background-position: 54px 6.6px;
+.learn:before{
+    content: " ";
+    overflow: hidden;
+    display: block;
+    float: left;
+    margin-right: 25px;
+    vertical-align: middle;
+    height: 30px;
+    width: 42px;
+    background-image: url(image/sprite.png);
+    background-position: -3px -88px;
 }
-.list{
-    background-image: url(image/list.png);
-    background-position: 60px 5.6px;
+.list:before{
+    content: " ";
+    overflow: hidden;
+    display: block;
+    float: left;
+    margin-right: 34px;
+    vertical-align: middle;
+    height: 41px;
+    width: 33px;
+    background-image: url(image/sprite.png);
+    background-position: -8px -47px;
 }
+.past{
+    display: table;
+}/*костыль. может, есть способ получше?*/
 
 .page1{
    height: 100%;
    width: 100%; 
    background-color: #eff3f7;
+   font-size: 0px;
+   padding-bottom: 40px;
 }
 .example {
    display: inline-block;
@@ -297,26 +319,33 @@ a[href^="skype:"] div {
 }
 .block{
     display: block;
+    position: relative;
     width: 182px;
     height: 129px;
     border-radius: 5px;
     border: 3px solid #3d8eb9;
+    background-color: #1c667a;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    align-items: center;
-    justify-content:center;
 }
-.block>span{
+.defenition{
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
     font-size: 11px;
     color:#eff3f7;
     border-radius: 5px;
+    margin: 20px 25px;
     padding: 0px 4px;
     border: 2px solid #eff3f7;
+}/*не работает центрирование, надо разобраться*/
+.site_image{
+    width: 100%;
+    position: absolute;
+    display: block;
 }
-.block:hover {
-    background-color: rgba(19,101,144,.8);
+.site_image:hover {
+    opacity: 0.3;
 }
 .site{
     display: block;
@@ -325,33 +354,34 @@ a[href^="skype:"] div {
     font-style: italic;
     margin: 6px 0 4px;
 }
-#newproject{
-    display: inline-block;
+.newproject{
+    display: block;
     width: 182px;
     height: 129px;
     border-radius: 5px;
     border: 2px dashed #3d8eb9;
     color: #3d8eb9;
     font-size: 13px;
-    margin: 28px 6px 8px 20px;
     text-align: center;
-    vertical-align: top;
 }
-#newproject>img{
-    display: block;
-    justify-content: center;
+.addimage{
+    background-image: url(image/sprite.png);
+    background-position: -57px -41px;
+    width: 32px;
+    height: 32px;
+    margin-top: 40px;
+    margin-left: 70px;
 }
 
 .page3{
-    width: 403px;
+    width: 416px;
     margin: 30px auto;
 }
-#project{
+.project{
     color: #f2f6fa;
     background-color: #3d8eb9;
     border-bottom: 16px solid #3ba8c0;
-    font-size: 26.1px;
-    align-items: center;
+    font-size: 27px;
     padding: 42px 0 38px 60px;
 }
 .enter{
@@ -360,16 +390,15 @@ a[href^="skype:"] div {
     font-size: 19px;
     color: #87aeba;
     padding: 0;
-    margin: 12px;
+    margin: 13px 5px -1px 8px;
 }
-#Fio,#Email,#Message,#capchaImage,#capcha{
+#Fio,#Email,#Message,.capchaImage,#capcha{
     display: block;
     border-radius: 3px;
     border: thin solid #48cbe8;  
     font-family: "FiraSans Ligth";
     color: #48cbe8;
     font-size: 14px;
-    align-content: flex-start;
     padding-left: 8px;
     margin-top: 4px;
 }
@@ -379,50 +408,61 @@ a[href^="skype:"] div {
 }
 #Email{
     height: 41px;
-    width: 193px;
+    width: 194px;
 }
 #Message{
     height: 183px;
     width: 402px;
-}
-#capchaImage{
+    vertical-align: top;
+}/*почему оно выравнивает текст по центру? не ясно*/
+.capchaImage{
     height: 80px;
     width: 193px;
     float: left;
 }
 #capcha{
     height: 34px;
-    width: 195px;
+    width: 194px;
     float: right;
+    margin-top: 22px;
 }
-#Submit,#clear{
+.Submit,.Clear{
     border-radius: 5px;
     border-width: 0;
     height: 34px;
     padding: 0 22px;
+    padding-bottom: 2px;
     color: #f2f6fa;
     font-size: 19px;
     box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.2);
     transition: all 0.2s ease 0s;
+    position: relative;
+    margin: 22px 7px;
+    margin-bottom: 24px;
 }
-#Submit:hover,#clear:hover{
+.Submit:hover,.Clear:hover{
     box-shadow: none;
+    margin-top: 24px;
+    margin-bottom: 22px;
 }
-#Submit:active,#clear:active{
+.Submit:active,.Clear:active{
     box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.2);
+    margin-top: 26px;
+    margin-bottom: 20px;
+    padding-top: 2px;
 }
-#Submit{
+.Submit{
     background-color: #48cbe8;
     float: left;
 }
-#clear{
+.Clear{
     background-color: #849db5;
     float: right;
 }
 
 .wrap {
     min-height: 100%; 
-    margin-bottom: -80px;
+    margin-bottom: -77px;
 }
 .wrap:after {
     content: '';
@@ -434,15 +474,17 @@ a[href^="skype:"] div {
     height: 77px;
     font-family: 'FiraSans Ligth';
     font-size: 14.1px;
-    padding-top: 2px;
     text-align: center; 
 }
-#lock{
+.lock{
     float: left;
     width: 20px;
     height: 34px;
-    background-image: url(image/lock.png);
-    margin: 0px 230px 1px 2px;
-    position: relative;
+    background-image: url(image/sprite.png);
+    background-position: 36px 77px;
+    margin: 26px -660px 0 645px;
+}
+.footer>div{
+    margin-top: 33px;
 }
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1c667a+0,f6fafe+0,d8d8d8+0,f2f6fa+0,87aeba+28,1c667a+48,87aeba+71,f2f6fa+100 */

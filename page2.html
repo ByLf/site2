@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
     <title>Мои работы</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="fonts/font-face.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <div class="wrap clearfix">
-      <header class="header">
+    <header class="header">
        <img src="image/logo.png" alt="">
         <a href="" class="logo">
-          <img src="image/logo1.png" alt="LoftSchool">
+          <img class="Logo" src="image/logo1.png" alt="LoftSchool">
          </a>
-        <div class="soc_net">
-            <a href=""><img src="image/SocNet.png" alt="Вконтакте"></a>
-            <a href=""><img src="image/SocNet.png" alt="Twitter"></a>
-            <a href=""><img src="image/SocNet.png" alt="Facebook"></a>
-            <a href=""><img src="image/SocNet.png" alt="GitHub"></a>
-        </div>
+        <ul class="soc_net">
+            <li class="soc_network"><a href="" class="vk"><div class="social_net">Вконтакте</div></a></li>
+            <li class="soc_network"><a href="" class="tw"><div class="social_net">Twitter</div></a></li>
+            <li class="soc_network"><a href="" class="fb"><div class="social_net">Facebook</div></a></li>
+            <li class="soc_network"><a href="" class="gh"><div class="social_net">GitHub</div></a></li>
+        </ul>
          <!--[if gte IE 8]>
              <div class="gradient"></div>
          <![endif]-->
@@ -36,46 +39,50 @@
         <aside class="aside">
             <div class="menu">
                 <ul>
-                    <li><a href="index.html">Обо мне</a></li>
-                    <li><a href="page1.html">Мои работы</a></li>
-                    <li><div>Связаться со мной</div></li>
+                    <li><a class="nav" href="index.html">Обо мне</a></li>
+                    <li><a class="nav" href="page1.html">Мои работы</a></li>
+                    <li><div class="now">Связаться со мной</div></li>
                 </ul>
             </div>
             <div class="contact">
+                 <div class="cont_h">Контакты</div>
                 <ul>
-                    <li><div>Контакты</div></li>
-                    <li><a href="malito:pochta@mail.ru"><div></div>pochta@mail.ru</a></li>
-                    <li><a href="tel:+79812342323"><div></div>+79812342323</a></li>
-                    <li><a href="skype:nickname"><div></div>nickname</a></li>
+                    <li><a class="malito" href="malito:pochta@mail.ru"><div></div>pochta@mail.ru</a></li>
+                    <li><a class="tel" href="tel:+79812342323"><div></div>+79812342323</a></li>
+                    <li><a class="skype" href="skype:nickname"><div></div>nickname</a></li>
                 </ul> 
                 
             </div>
         </aside>
         <div class="content">
             <section class="page1">
-                <h1 id="project">У вас интересный проект? Напишите мне</h1>
-                <div class="page3">
-                    <div class="enter"> Имя
+                <h2 class="project">У вас интересный проект? Напишите мне</h2>
+                <form class="page3">
+                    <div class="enter">
+                      <label for="Fio">Имя</label>
                       <input id="Fio" type="text" placeholder="Как к Вам обращаться"> 
                      </div> 
-                    <div class="enter"> Email
+                    <div class="enter">
+                      <label for="Email">Email</label>
                       <input id="Email" type="text" placeholder="Куда мне писать">
                      </div>
-                    <div class="enter"> Сообщение
+                    <div class="enter">
+                      <label for="Message">Сообщение</label>
                       <input id="Message" type="text" placeholder="Кратко в чем суть"> </div>
-                   <div class="enter"> 
-                     <div id="capchaImage"></div>
+                   <div class="enter">
+                       <label for="capcha">Введите код,указанный на картинке</label>
+                       <div class="capchaImage"></div>
                        <input id="capcha" type="text" placeholder="Введите код">
                    </div>
-                    <input type="submit" id="Submit" value="Отправить">
-                    <input type="reset" id="clear" value="Очистить">
-                </div>        
+                    <button type="submit" class="Submit">Отправить</button>
+                    <button type="reset" class="Clear">Очистить</button>
+                </form>
             </section>
         </div>  
     </div>
     </div>
     <footer class="footer">
-        <a href="" id="lock"></a>
+        <a href="" class="lock"></a>
         <div>© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
     </footer>
 </body>

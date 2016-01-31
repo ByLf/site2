@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
     <title>Обо мне</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="fonts/font-face.css">
     <link rel="stylesheet" href="style.css">
@@ -12,13 +15,13 @@
       <header class="header">
        <img src="image/logo.png" alt="">
         <a href="" class="logo">
-          <img src="image/logo1.png" alt="LoftSchool">
+          <img class="Logo" src="image/logo1.png" alt="LoftSchool">
          </a>
         <ul class="soc_net">
-            <li><a href="" class="vk"><div>Вконтакте</div></a></li>
-            <li><a href="" class="tw"><div>Twitter</div></a></li>
-            <li><a href="" class="fb"><div>Facebook</div></a></li>
-            <li><a href="" class="gh"><div>GitHub</div></a></li>
+            <li class="soc_network"><a href="" class="vk"><div class="social_net">Вконтакте</div></a></li>
+            <li class="soc_network"><a href="" class="tw"><div class="social_net">Twitter</div></a></li>
+            <li class="soc_network"><a href="" class="fb"><div class="social_net">Facebook</div></a></li>
+            <li class="soc_network"><a href="" class="gh"><div class="social_net">GitHub</div></a></li>
         </ul>
          <!--[if gte IE 8]>
              <div class="gradient"></div>
@@ -36,17 +39,17 @@
         <aside class="aside">
             <div class="menu">
                 <ul>
-                    <li><div>Обо мне</div></li>
-                    <li><a href="page1.html">Мои работы</a></li>
-                    <li><a href="page2.html">Связаться со мной</a></li>
+                    <li><div class="now">Обо мне</div></li>
+                    <li><a class="nav" href="page1.html">Мои работы</a></li>
+                    <li><a class="nav" href="page2.html">Связаться со мной</a></li>
                 </ul>
             </div>
             <div class="contact">
-                 <div class="cont_ul">Контакты</div>
+                 <div class="cont_h">Контакты</div>
                 <ul>
-                    <li><a href="malito:pochta@mail.ru"><div></div>pochta@mail.ru</a></li>
-                    <li><a href="tel:+79812342323"><div></div>+79812342323</a></li>
-                    <li><a href="skype:nickname"><div></div>nickname</a></li>
+                    <li><a class="malito" href="malito:pochta@mail.ru"><div></div>pochta@mail.ru</a></li>
+                    <li><a class="tel" href="tel:+79812342323"><div></div>+79812342323</a></li>
+                    <li><a class="skype" href="skype:nickname"><div></div>nickname</a></li>
                 </ul> 
                 
             </div>
@@ -54,13 +57,13 @@
         <div class="content">
             <section class="section">
                 <h2 class="main">Основная информация</h2>
-                <div class="photo"><img src="image/male.jpg" alt="Фотография"></div> 
-                <ul>
-                    <li><span class="b">Меня зовут: </span>Иванов Андрей Степанович</li>
-                    <li><span class="b">Мой возраст: </span>25 лет</li>
-                    <li><span class="b">Мой город: </span>Санкт-Петербург, Россия</li>
-                    <li><span class="b">Моя специализация: </span>FRONTEND разработчик</li>
-                    <li><span class="b">Ключевые навыки:</span>
+                <div class="photo"><img class="photo_into" src="image/male.jpg" alt="Фотография"></div>
+                <ul  class="about_me">
+                    <li><span class="about_me_line">Меня зовут: </span><div class="about_me_answer">Иванов Андрей Степанович</div></li>
+                    <li><span class="about_me_line">Мой возраст: </span><div class="about_me_answer">25 лет</div></li>
+                    <li><span class="about_me_line">Мой город: </span><div class="about_me_answer">Санкт-Петербург, Россия</div></li>
+                    <li><span class="about_me_line">Моя специализация: </span><div class="about_me_answer">FRONTEND разработчик</div></li>
+                    <li><span class="about_me_line">Ключевые навыки:</span>
                       <ul class="Skil">
                         <li class="skils">html</li>
                         <li class="skils">css</li>
@@ -72,25 +75,25 @@
                 </ul>
             </section>
             <section class="section">
-                <h1 class="main">Опыт работы</h1>
+                <h2 class="main">Опыт работы</h2>
                 <ul>
-                    <li class="work"><span class="info">"ИП Боровицкий" - Продавец дисков </span>Сентябрь 2005 - Август 2008</li>
-                    <li class="work"><span class="info">"ООО Системы безопастности" - Системный администратор </span>Июнь 2008 - Июль 2010</li>
+                    <li class="work"><div class="past" ><span class="info">"ИП Боровицкий" - Продавец дисков </span>Сентябрь 2005 - Август 2008</div></li>
+                    <li class="work"><div class="past"><span class="info">"ООО Системы безопастности" - Системный администратор Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facere illo accusantium explicabo, error ipsa libero assumenda id, odit quam harum vero eveniet hic veniam. Aliquam magnam, hic expedita at?</span>Июнь 2008 - Июль 2010</div></li>
                 </ul>
             </section>
             <section class="section">
-                <h1 class="main">Образование</h1>
+                <h2 class="main">Образование</h2>
                 <ul>
-                    <li class="learn"><span class="info">Незаконченное высшее. СПБГУ ИТМО </span>Октябрь 2012 - по настоящее время</li>
-                    <li class="list"><span class="info">Курсы Loftschool.ru </span>Ноябрь 2014 - по настоящее время</li>
+                    <li class="learn"><div class="past"><span class="info">Незаконченное высшее. СПБГУ ИТМО </span>Октябрь 2012 - по настоящее время</div></li>
+                    <li class="list"><div class="past"><span class="info">Курсы Loftschool.ru </span>Ноябрь 2014 - по настоящее время</div></li>
                 </ul>
             </section>
         </div>
     </div>
     </div>
     <footer class="footer">
-        <a href="" id="lock"></a>
-        © 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+        <a href="" class="lock"></a>
+        <div>© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
     </footer>
 </body>
 </html>

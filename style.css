@@ -255,6 +255,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-bottom: -4px;
     
 }
+.info_past{
+    margin-top: 22px;
+}
 .list,.learn,.work {
     font-weight: normal;
     margin-top: 6px;

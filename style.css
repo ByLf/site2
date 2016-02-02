@@ -4,6 +4,7 @@
     list-style-type: none;
 }
 ul{
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +15,7 @@ html{
 html,body{
     height: 100%;
     margin: 0;
-}
+}/*остатки тегового стиля.*/
 .clearfix:after {
 content: ".";
 display: block;
@@ -23,10 +24,7 @@ clear: both;
 visibility: hidden;
 }
 
-h1,h2,h3,h4,h5,h6,h7{
-    margin: 0;
-    font-weight: normal;
-}
+
 .header, .footer {
     background-color: #eff3f7;
     width: 100%;
@@ -86,6 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-color: #58697a;
     margin-left: 21px;
     target:'_blank';
+    transform: all 2s ease 0s;
 }
 .vk:hover, .tw:hover, .fb:hover, .gh:hover{background-color: #3ba8c0;}
 .vk{background-position: 5px 4px;}
@@ -101,7 +100,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     width: 960px;
     margin: 0px auto;
 }
-.menu, .contact, .section, .page1{
+.menu, .contact, .section, .page1, .block{
     border-radius: 5px;
     overflow: hidden;
 }
@@ -118,13 +117,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .menu {
     margin-bottom: 24px;
 }
+.now{
+    display: block;
+    background-color: #3ba8c0;
+    color: white;
+    padding: 21px 20px 18px 27px;
+    font-size: 23px;
+}
 .nav{
+    position: relative;
     display: block;
     background-color: #eff3f7;
     color: #58697a;
     font-size: 21px;
     padding: 17.5px 20px 19px 27px;
     border-top: 2.5px solid #3ba8c0;
+}
+.nav:after, .nav:before{
+  content: ' ';
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 10px;
+  top: -2.5px;
+  background-color: #eff3f7;
+}
+.nav:after{
+    right: 0px;
+}
+.nav:before{
+    left:0px;
 }
 .nav:hover {
     color:#3ba8c0;
@@ -134,12 +156,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding-bottom: 19px;
 }/* я не знаю как иначе найти первый элемент в списке.
 возможно, можно сделать немного по другому, например стилизовать li, и отдать области ссылки всю внутреннюю область*/
-.now{
-    background-color: #3ba8c0;
-    color: white;
-    padding: 21px 20px 16px 27px;
-    font-size: 23px;
-}
 .cont_h {
     background-color: #3ba8c0;
     padding: 7px 30px 0 19px;
@@ -166,7 +182,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-color: transparent;
     margin-right: 16px;
 }/*Любопытно: при установке display: inline-block; текст прескакивает на новую строку. даже если обнулить границы */
-.malito{background-color: #41b9d4;} /*Кажется, такая ссылка у меня не работает. Быть может, это из-за того, что я не использую почтовых клиентов*/
+.malito{background-color: #41b9d4;}
 .malito:before{
     background-image: url(image/sprite.png);
     background-position: 76px 96px;
@@ -200,6 +216,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding: 2px;
 }
 .main{
+    margin: 0;
+    font-weight: normal;
     display: inline-block;
     margin-right: 250px;
     padding: 12px 25px 13px 21px;
@@ -260,10 +278,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .list,.learn,.work {
     font-weight: normal;
-    margin-top: 6px;
+    position: relative;
+    margin-top: 4px;
     padding-top: 0px;
     padding-bottom: 10px;
-    padding-left: 56px;
+    padding-left: 126px;
     font-family: "FiraSans Ligth";
     font-size: 16px;
 }
@@ -271,9 +290,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     content: " ";
     overflow: hidden;
     display: block;
-    float: left;
-    margin-right: 30px;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    margin-top: -4px;
     height: 40px;
     width: 40px;
     background-image: url(image/sprite.png);
@@ -283,9 +304,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     content: " ";
     overflow: hidden;
     display: block;
-    float: left;
-    margin-right: 25px;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    margin-top: -8px;
     height: 30px;
     width: 42px;
     background-image: url(image/sprite.png);
@@ -295,9 +318,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     content: " ";
     overflow: hidden;
     display: block;
-    float: left;
-    margin-right: 34px;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    margin-top: -5px;
     height: 41px;
     width: 33px;
     background-image: url(image/sprite.png);
@@ -327,26 +352,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     position: relative;
     width: 182px;
     height: 129px;
-    border-radius: 5px;
     border: 3px solid #3d8eb9;
     background-color: #1c667a;
-    overflow: hidden;
 }
 .defenition{
     display: inline-block;
     position: absolute;
-    vertical-align: middle;
-    text-align: center;
+    right: 50%;
+    top: 40%;
+    transform: translate(50%, -40%);
     font-size: 11px;
     color:#eff3f7;
     border-radius: 5px;
-    margin: 20px 25px;
+    margin: 10px 4px;
     padding: 0px 4px;
     border: 2px solid #eff3f7;
-}/*не работает центрирование, надо разобраться*/
+}/*не идеально, но пойдет. центрировал на глаз, без пикселя*/
 .site_image{
     width: 100%;
-    position: absolute;
+    position: relative;
     display: block;
 }
 .site_image:hover {
@@ -383,6 +407,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin: 30px auto;
 }
 .project{
+    margin: 0;
+    font-weight: normal;
     color: #f2f6fa;
     background-color: #3d8eb9;
     border-bottom: 16px solid #3ba8c0;
@@ -418,7 +444,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 #Message{
     height: 183px;
     width: 402px;
-    vertical-align: top;
 }/*почему оно выравнивает текст по центру? не ясно*/
 .capchaImage{
     height: 80px;

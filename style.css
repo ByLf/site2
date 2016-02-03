@@ -99,6 +99,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .wrapper{
     width: 960px;
     margin: 0px auto;
+    position: relative;
 }
 .menu, .contact, .section, .page1, .block, .autorization{
     border-radius: 5px;
@@ -402,7 +403,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-left: 70px;
 }
 
-.page3{
+#page3{
     width: 416px;
     margin: 30px auto;
 }
@@ -458,38 +459,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     float: right;
     margin-top: 22px;
 }
-.Submit,.Clear{
+.buttons{
+    margin: 20px 10px;
+    width: 400px;
+    position: relative;
+}
+.Input{
+    position: absolute;
     border-radius: 5px;
     border-width: 0;
-    height: 34px;
     padding: 0 22px;
     padding-bottom: 2px;
     color: #f2f6fa;
-    font-size: 19px;
     box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.2);
     transition: all 0.2s ease 0s;
-    position: relative;
-    margin: 22px 7px;
-    margin-bottom: 24px;
+    background-color: #48cbe8;
 }
-.Submit:hover,.Clear:hover{
-    box-shadow: none;
-    margin-top: 24px;
-    margin-bottom: 22px;
+.Input:hover{
+   margin-top: 2px;
+   box-shadow: none;
 }
-.Submit:active,.Clear:active{
+.Input:active{
     box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.2);
-    margin-top: 26px;
-    margin-bottom: 20px;
+    margin-top: 4px;
     padding-top: 2px;
+}
+.Submit,.Clear{
+    height: 34px;
+    font-size: 19px;
 }
 .Submit{
     background-color: #48cbe8;
-    float: left;
+    left: 0;
 }
 .Clear{
     background-color: #849db5;
-    float: right;
+    right: 0;
 }
 
 .wrap {
@@ -503,7 +508,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-top: 8px;
 }
 .footer{
-    position: relative;
     height: 77px;
     font-family: 'FiraSans Ligth';
     font-size: 14.1px;

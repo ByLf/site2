@@ -8,6 +8,65 @@
     z-index: 20;
     background-color: rgba(26, 67, 83, 0.76)
 }
-.bg-passive{
+.passive{
     display: none;
+}
+
+#name, #soap, #text, #secretCode{
+    font-size: 16px;
+    font-family: 'FiraSans Book';
+    color: white;
+    background-color: rgba(175, 36, 36, 0.87);
+    display: inline-block;
+    position: absolute;
+    padding: 2px 12px;
+    height: 30px;
+}
+#name:after, #soap:before, #text:after, #secretCode:before{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-color:rgba(175, 36, 36, 0.87);
+    border-top: 15px solid transparent;
+    border-bottom:  15px solid transparent;
+    border-style: solid;
+    top: 0;
+}
+
+#name:after,#text:after{
+    border-left-width: 10px;
+    border-right-color: transparent;
+    right: -12px;
+}
+#soap:before, #secretCode:before{
+    border-right-width: 10px;
+    border-left-color: transparent;
+    left: -12px;
+}
+
+#name{
+    top: 215px;
+    right: 530px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+#soap{
+    top: 210px;
+    left: 842px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#text{
+    top:297px;
+    right:533px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+#secretCode{
+    top:530px;
+    left:847px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
 }

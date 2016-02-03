@@ -40,8 +40,29 @@
     width: 424px;
 }
 .input{
+    position: relative;
+    border-radius: 5px;
+    border-width: 0;
+    padding: 0 22px;
+    padding-bottom: 4px;
+    color: #f2f6fa;
+    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.2);
+    transition: all 0.2s ease 0s;
+    background-color: #48cbe8;
+
     font-size: 35px;
-    margin: 38px 0 5px 182px;
     width: 225px;
     height: 53px;
+}
+.input:hover{
+   margin-top: 4px;
+   box-shadow: none;
+}
+.input:active{
+    box-shadow: inset 0px 4px 0px 0px rgba(0,0,0,0.2);
+    margin-top: 8px;
+    padding-top: 4px;
+}
+.button{
+    margin: 39px 182px;
 }

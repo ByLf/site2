@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="fonts/font-face.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Part_2/popup.css">
 </head>
 <body>
    <div class="wrap clearfix">
@@ -57,7 +58,7 @@
         <div class="content">
             <section class="page1">
                 <h2 class="project">У вас интересный проект? Напишите мне</h2>
-                <form class="page3">
+                <form id="page3">
                     <div class="enter">
                       <label for="Fio">Имя</label>
                       <input id="Fio" type="text" placeholder="Как к Вам обращаться"> 
@@ -75,11 +76,17 @@
                        <div class="capchaImage"></div>
                        <input id="capcha" type="text" placeholder="Введите код">
                    </div>
-                    <button type="submit" class="Submit">Отправить</button>
-                    <button type="reset" class="Clear">Очистить</button>
+                   <div class="buttons">
+                     <button type="submit" class="Submit Input">Отправить</button>
+                     <button type="reset" class="Clear Input">Очистить</button>
+                   </div>
                 </form>
             </section>
-        </div>  
+        </div>
+           <div id="name">Неверно&nbsp;указано&nbsp;имя</div>
+           <div id="soap">Вы&nbsp;не&nbsp;указали&nbsp;Email</div>
+           <div id="text">Ммм....&nbsp;Что&nbsp;вы&nbsp;хотели этим&nbsp;сказать?</div>
+           <div id="secretCode">А&nbsp;вы&nbsp;не&nbsp;робот&nbsp;случаем?</div>
     </div>
     <script type="text/javascript" src="js/menu.js"></script>
     </div>

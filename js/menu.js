@@ -11,6 +11,6 @@ for (i = 0; i < k; i++) {
         }
         break;
      }
- } /*ТАК, какая разница между baseURI и просто href?!*/
+ } /*ТАК, какая разница между baseURI и просто href: первое никак не изменишь.*/
 /* elem[0].className = "now";
 console.log(elem[0].className); -точно рботающая тварь*/

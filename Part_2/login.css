@@ -1,0 +1,47 @@
+.autorization{
+    display: block;
+    width: 590px;
+    height: 485px;
+    margin: 200px auto;
+    background-color: #eff3f7;
+    box-shadow: 0px 4px 6.86px 0.14px rgba(13, 16, 7, 0.29);
+}
+
+.input_data{
+    font-family: 'FiraSass Book';
+    margin: 0;
+    font-weight: normal;
+    color: #f2f6fa;
+    background-color: #3d8eb9;
+    border-bottom: 15px solid #3ba8c0;
+    font-size: 44px;
+    padding: 17px 0 23px 130px;
+}
+.login, .password {
+    font-family: 'FiraSans Ligth';
+    font-size: 39px;
+    color: #87aeba;
+    text-align: center;
+    margin: 18px auto;
+    margin-bottom: -4px;
+}
+#pass, #guest_name {
+    display: block;
+    border-radius: 3px;
+    border: thin solid #48cbe8;
+    font-family: "FiraSans Ligth";
+    color: #48cbe8;
+    font-size: 19px;
+    padding-left: 19px;
+    padding-top: 0px;
+    margin-top: 9px;
+    margin-left: 83px;
+    height: 62px;
+    width: 424px;
+}
+.input{
+    font-size: 35px;
+    margin: 38px 0 5px 182px;
+    width: 225px;
+    height: 53px;
+}

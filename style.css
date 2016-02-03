@@ -84,7 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-color: #58697a;
     margin-left: 21px;
     target:'_blank';
-    transform: all 2s ease 0s;
+    transform: background-color 2s ease 0s;
 }
 .vk:hover, .tw:hover, .fb:hover, .gh:hover{background-color: #3ba8c0;}
 .vk{background-position: 5px 4px;}
@@ -100,7 +100,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     width: 960px;
     margin: 0px auto;
 }
-.menu, .contact, .section, .page1, .block{
+.menu, .contact, .section, .page1, .block, .autorization{
     border-radius: 5px;
     overflow: hidden;
 }
@@ -444,7 +444,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 #Message{
     height: 183px;
     width: 402px;
-}/*почему оно выравнивает текст по центру? не ясно*/
+    padding: 9px 8px;
+    resize: none;
+}
 .capchaImage{
     height: 80px;
     width: 193px;
@@ -492,7 +494,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 
 .wrap {
     min-height: 100%; 
-    margin-bottom: -77px;
+    margin-bottom: -80px;
 }
 .wrap:after {
     content: '';
@@ -501,18 +503,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-top: 8px;
 }
 .footer{
+    position: relative;
     height: 77px;
     font-family: 'FiraSans Ligth';
     font-size: 14.1px;
     text-align: center; 
 }
 .lock{
-    float: left;
+    position: absolute;
+    left: 644px;
+    bottom: 16px;
     width: 20px;
     height: 34px;
     background-image: url(image/sprite.png);
     background-position: 36px 77px;
-    margin: 26px -660px 0 645px;
 }
 .lock:hover{
     background-position: 36px 36px;

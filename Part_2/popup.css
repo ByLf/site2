@@ -17,7 +17,7 @@
     font-family: 'FiraSans Book';
     color: white;
     background-color: rgba(175, 36, 36, 0.87);
-    display: inline-block;
+    display: none;
     position: absolute;
     padding: 2px 12px;
     height: 30px;

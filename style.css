@@ -134,6 +134,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding: 17.5px 20px 19px 27px;
     border-top: 2.5px solid #3ba8c0;
 }
+.NaV{
+    position: relative;
+    display: block;
+    background-color: #eff3f7;
+    color: #58697a;
+    font-size: 21px;
+    padding: 17.5px 20px 19px 27px;
+    border-top: 2.5px solid #3ba8c0;
+}
 .nav:after, .nav:before{
   content: ' ';
   position: absolute;

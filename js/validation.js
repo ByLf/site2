@@ -1,37 +1,43 @@
-var block = document.getElementById('page3');
+var  doc = document,
+     block = doc.getElementById('page3'),
+     firstError = doc.getElementById('name');
 /*он нашел айди, и вложенные в него ид идут как части массива. в итоге, это сложный массив*/
 
 var output = function () {
     var popup = [],
         N = 0;
-    popup[0]=document.getElementById('name');
+    popup[0] = firstError;
     do {
         N++;
-        popup[N] = popup[N-1].nextElementSibling;
+        popup[N] = popup[N - 1].nextElementSibling;
     }
-    while ( popup[N] !== null );
+    while (popup[N] !== null);
     N--;
     alert(N);
     /*Создане массива с вывесками ошибок*/
-    var  sort = [[], ['.','@'], []],
+    var  sort = [[], ['.', '@'], []],
          Er = [],
          i = 0;
-    for ( i = 0; i < N; i++ ) Er[i] = true;
+    for (i = 0; i < N; i++) { Er[i] = true; }
     /*Создание массива с нужными символами*/
-     function Error_on( obj ) {
-        obj.style.display = 'inline-block';
+     function Error_on(num) {
+        while (num !== 0 && popup[num] === null || popup[num] === undefined)
+            popup[num] = popup [num - 1];
+        popup[num].className = 'active';
+        block[num].classList.add = 'Error';
     }
-    function Error_off( obj ) {
-        obj.style.display='none';
+    function Error_off(num) {
+        popup[num].className = 'passive';
+        block[num].classList.remove('Error');
     }
     /*Функциии показывания/скрытия*/
     function valid(k) {
-        var sym_sint = function() {
+        var sym_sint = function () {
             var m = sort[k].length,
                 v = 0,
                 trey = true,
                 str = popup[k].value;
-            for ( v = 0; v<m; v++){
+            for (v = 0; v < m; v++) {
                 if (str.lastIndexOf(sort[k][v]) <= 0) {
                     trey = false;
                 }
@@ -39,20 +45,26 @@ var output = function () {
             return trey;
         }
         /*Функция провеки наличия нужных символов*/
-        if ( popup[i].value.length >= 0 && sym_sint(i) ) {
+        if (popup[i].value.length >= 0 && sym_sint(i)) {
               alert('yes, '+ popup.value);
         }
         else {
-            Error_on(popup[i]);
+            Error_on(i);
             Er[i] = false;
         }
     }
     /*Функция проверки поля*/
-    popup[que].onclick{ Error_off};
+    var que = 0;
+    for (que = 0; que < N; que++ )
+      block[que].onclick = function() {
+          if (!Er) Error_off( que );
+      }
+    /* Присвоение тултипам соотв. полей*/
     return {
         valid: function (e) {
                     e.preventDefault();
-                    for( var p = 0; p < N; p++ ){
+                    var p = 0
+                    for (p = 0; p < N; p++) {
                         valid(p);
                     }
         }

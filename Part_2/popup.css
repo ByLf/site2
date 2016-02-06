@@ -11,12 +11,18 @@
 .passive{
     display: none;
 }
+.active {
+    display: inline-block;
+}
+.Error {
+    background-color: #ebb2b2;
+}
 
 #name, #soap, #text, #secretCode{
     font-size: 16px;
     font-family: 'FiraSans Book';
     color: white;
-    background-color: rgba(175, 36, 36, 0.87);
+    background-color: rgb(175, 36, 36);
     display: none;
     position: absolute;
     padding: 2px 12px;
@@ -28,7 +34,7 @@
     position: absolute;
     height: 0px;
     width: 0px;
-    border-color:rgba(175, 36, 36, 0.87);
+    border-color:rgb(175, 36, 36);
     border-top: 15px solid transparent;
     border-bottom:  15px solid transparent;
     border-style: solid;

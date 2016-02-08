@@ -1,28 +1,30 @@
-var  doc = document,
-     block = doc.getElementById('page3'),
-     firstError = doc.getElementById('name');
+var doc = document,
+    N = 4,
+    sort = [[], ['.', '@'], [], []],/*Создание массива с нужными символами*/
+    block = document.getElementById('page3'),
+    firstError = doc.getElementById('name');
 /*он нашел айди, и вложенные в него ид идут как части массива. в итоге, это сложный массив*/
 
-var output = function () {
+var output = (function () {
     var popup = [],
-        N = 0;
-    popup[0] = firstError;
+        i = 0,
+        im = 0,
+        ik = 0, //четчики. одна переменная для счет не подходит.
+        popup[0] = firstError;
     do {
-        N++;
+        i++;
         popup[N] = popup[N - 1].nextElementSibling;
     }
-    while (popup[N] !== null);
-    N--;
-    alert(N);
-    /*Создане массива с вывесками ошибок*/
-    var  sort = [[], ['.', '@'], []],
-         Er = [],
-         i = 0;
-    for (i = 0; i < N; i++) { Er[i] = true; }
-    /*Создание массива с нужными символами*/
+    while (i < N && popup[N] !== null);
+    /*Создане массива с вывесками ошибок+*/
+    var  Er = [],
+    for (im = 0; im < N; im++) { Er[im] = true; }
+    console.log(Er);
+    /*Создание массива с меткой правильности заполнения*/
      function Error_on(num) {
-        while (num !== 0 && popup[num] === null || popup[num] === undefined)
+        while (num !== 0 && (popup[num] === null || popup[num] === undefined)){
             popup[num] = popup [num - 1];
+        }
         popup[num].className = 'active';
         block[num].classList.add = 'Error';
     }
@@ -38,40 +40,40 @@ var output = function () {
                 trey = true,
                 str = popup[k].value;
             for (v = 0; v < m; v++) {
-                if (str.lastIndexOf(sort[k][v]) <= 0) {
+                if (str.prototype.lastIndexOf(sort[k][v]) <= 0) {
                     trey = false;
                 }
             }
             return trey;
         }
+        alert(block[k].value)
         /*Функция провеки наличия нужных символов*/
-        if (popup[i].value.length >= 0 && sym_sint(i)) {
+        if ( Er[k] && block[k].value.length >= 0 && sym_sint(k)) {
               alert('yes, '+ popup.value);
         }
         else {
-            Error_on(i);
-            Er[i] = false;
+            Error_on(k);
+            Er[k] = false;
         }
     }
     /*Функция проверки поля*/
-    var que = 0;
-    for (que = 0; que < N; que++ )
-      block[que].onclick = function() {
-          if (!Er) Error_off( que );
+    for (ik = 0; ik < N; ik++)
+      block[ik].onclick = function() {
+          if (!Er[ik]) Error_off(ik);
       }
     /* Присвоение тултипам соотв. полей*/
     return {
-        valid: function (e) {
+        validation: function (e) {
                     e.preventDefault();
-                    var p = 0
+                    var p = 0;
                     for (p = 0; p < N; p++) {
                         valid(p);
                     }
         }
     }
-} ();
+}) ();
 
-block.addEventListener('submit', output.valid);
+block.addEventListener('submit', output.validation);
 /*так, план такой:
   +не забыть про счетчик
   +сделать массив из вывода ошибок,

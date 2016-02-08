@@ -125,16 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding: 21px 20px 18px 27px;
     font-size: 23px;
 }
-.nav{
-    position: relative;
-    display: block;
-    background-color: #eff3f7;
-    color: #58697a;
-    font-size: 21px;
-    padding: 17.5px 20px 19px 27px;
-    border-top: 2.5px solid #3ba8c0;
-}
-.NaV{
+.nav, .NaV{
     position: relative;
     display: block;
     background-color: #eff3f7;
@@ -158,7 +149,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .nav:before{
     left:0px;
 }
-.nav:hover {
+.nav:hover, .NaV:hover{
     color:#3ba8c0;
 }
 .menu li:first-child .nav{

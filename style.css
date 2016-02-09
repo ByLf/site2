@@ -9,12 +9,14 @@ ul{
     padding: 0;
 }
 html{
-    background: url(image/comppattern2.png);
     font-family: 'FiraSans Book', sans-serif;
 }
 html,body{
     height: 100%;
     margin: 0;
+}
+body {
+    background: url(image/comppattern2.png);
 }/*остатки тегового стиля.*/
 .clearfix:after {
 content: ".";
@@ -36,7 +38,7 @@ visibility: hidden;
     width: 100%;
     height: 3px;
     margin: 0;
-    margin-top: 32px;
+    margin-top: 29px;
     background: #1c667a; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjNjY3YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjZmYWZlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkOGQ4ZDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjZmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iIzg3YWViYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iIzFjNjY3YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iIzg3YWViYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMmY2ZmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -51,26 +53,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 } /*просто грязный костыль. ничего особенного. просто листать дальше к футеру нельзя применять clearfix: градиент совсем исчезает*/
 .header {
     height: 117px;
-    padding-top: 35px;
-    padding-left: 99px;
-    margin-bottom: 42px;
+    padding-top: 39px;
+    padding-left: 100px;
+    margin-bottom: 40px;
 }
 .logo {
     display: inline-block;
-    background-image: url(image/logo0.png);
-    height: 42px;
-    width: 180px;
-    margin-left: 9px;
-    
-}
-.Logo{ transition: all 2s ease 0s;}/*плавное выделение*/
+    background-image: url(image/Logo-a.png);
+    height: 40px;
+    width: 244px;
+    transition: all 2s ease 0s;
+}/*плавное выделение*/
 .Logo:hover {
     opacity: 0;
     transition: all 2s ease 0s;
 }
 .soc_net{
     float: right;
-    margin-right: 113px;
+    margin-right: 100px;
+    margin-top: -4px;
 }
 .soc_network {
     display: inline-block;
@@ -83,18 +84,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     width: 46px;
     background-color: #58697a;
     margin-left: 21px;
-    target:'_blank';
+    target:'blank';
+    text-indent: 55px;
     transform: background-color 2s ease 0s;
 }
 .vk:hover, .tw:hover, .fb:hover, .gh:hover{background-color: #3ba8c0;}
 .vk{background-position: 5px 4px;}
 .tw{background-position: -43px 5px;}
+.tw:active {background-color: #9d2e2e;}
 .fb{background-position: -90px 4px;}
 .gh{background-position: -134px 4px;}
-.social_net{
-    position: absolute;
-    margin-top: -150px;
-}
 
 .wrapper{
     width: 960px;
@@ -122,7 +121,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: block;
     background-color: #3ba8c0;
     color: white;
-    padding: 21px 20px 18px 27px;
+    padding: 22px 20px 14px 27px;
     font-size: 23px;
 }
 .nav, .NaV{
@@ -131,7 +130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-color: #eff3f7;
     color: #58697a;
     font-size: 21px;
-    padding: 17.5px 20px 19px 27px;
+    padding: 19px 20px 18px 27px;
     border-top: 2.5px solid #3ba8c0;
 }
 .nav:after, .nav:before{
@@ -159,13 +158,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 возможно, можно сделать немного по другому, например стилизовать li, и отдать области ссылки всю внутреннюю область*/
 .cont_h {
     background-color: #3ba8c0;
-    padding: 7px 30px 0 19px;
+    padding: 6px 20px 0px 19px;
     color: white;
     font-size: 21px;
 }
 .malito, .tel, .skype{
     display: block;
-    padding: 6px 20px 7px 41px;
+    padding: 5px 20px 7px 41px;
     font-size: 17px;
     color: white;
 }
@@ -186,18 +185,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .malito{background-color: #41b9d4;}
 .malito:before{
     background-image: url(image/sprite.png);
-    background-position: 76px 96px;
+    background-position: 75px 95px;
     
 }
 .tel{background-color: #48cbe8;}
 .tel:before{
     background-image: url(image/sprite.png);
-    background-position: 78px 62px;
+    background-position: 76px 66px;
 }
 .skype{background-color: #51daf8;}
 .skype:before{
     background-image: url(image/sprite.png);
-    background-position: 77px 29px;
+    background-position: 76px 30px;
 }
 
 .content{
@@ -207,36 +206,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .section{
     display: block;
     background-color: #eff3f7;
-    padding-right: 49px;
-    padding-bottom: 36px;
-    margin-bottom: 27px;
+    padding-bottom: 35px;
+    margin-bottom: 26px;
     font-size: 15px;
 }
 .about_me{
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 12px;
     padding: 2px;
+    width: 374px;
 }
 .main{
     margin: 0;
     font-weight: normal;
-    display: inline-block;
-    margin-right: 250px;
-    padding: 12px 25px 13px 21px;
+    display: table;
+    padding: 13px 24px 12px 20px;
     border-bottom: 2.5px solid #3ba8c0;
     color: #3ba8c0;
     font-size: 27px;
 }
 .photo{
     display: inline-block;
-    float: left;
     border: 6px solid #3ba8c0;
-    margin: 35px 20px 30px 57px;
+    margin: 34px 18px -14px 54px;
     width: 150px;
     height: 150px;
+    vertical-align: top;
     /* border не работает. странно.! не забывать указывать тип границы.*/
 }
 .photo_into{
-    width: 100%;
+    height: 100%;
 } /*Стоит подумать как хоошенько оцентрировать его, сохраняя это свойство */
 .about_me_line{
     display:inline-table;
@@ -253,15 +252,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: inline-block;
     float: right; 
     width: 198px;
-    margin-top: 8px;
+    margin-top: 9px;
 }
 .skils{
    display: inline-block;
    font-family: "ProximaNovaCond Semibold";
    font-size: 14px;
-   padding: 1px 14px 1px 14px;
+   padding: 1px 14px;
    border-radius: 2px;
-   margin-right: 4px;
+   margin: 1px 3px 0px 1px;
    color: white;
    background-image: url(image/skils.png);
    background-repeat: repeat-x;
@@ -270,7 +269,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .info{
     display: block;
     font-family: 'FiraSans Book';
-    font-size: 16.4px;
+    font-size: 17px;
     margin-bottom: -4px;
     
 }
@@ -281,11 +280,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     font-weight: normal;
     position: relative;
     margin-top: 4px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-    padding-left: 126px;
+    padding-top: -2px;
+    padding-bottom: 19px;
+    padding-left: 124px;
     font-family: "FiraSans Ligth";
-    font-size: 16px;
+    font-size: 15px;
 }
 .work:before{
     content: " ";
@@ -293,9 +292,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: block;
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 54px;
     transform: translateY(-50%);
-    margin-top: -4px;
+    margin-top: -7px;
     height: 40px;
     width: 40px;
     background-image: url(image/sprite.png);
@@ -307,9 +306,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: block;
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 56px;
     transform: translateY(-50%);
-    margin-top: -8px;
+    margin-top: -9px;
     height: 30px;
     width: 42px;
     background-image: url(image/sprite.png);
@@ -321,9 +320,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: block;
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 58px;
     transform: translateY(-50%);
-    margin-top: -5px;
+    margin-top: -10px;
     height: 41px;
     width: 33px;
     background-image: url(image/sprite.png);
@@ -331,6 +330,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .past{
     display: table;
+    padding-right: 50px;
 }/*костыль. может, есть способ получше?*/
 
 .page1{
@@ -339,11 +339,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
    background-color: #eff3f7;
    font-size: 0px;
    padding-bottom: 40px;
+   margin-bottom: 6px;
+}
+.my_work{
+    padding: 14px 24px 11px 24px;
 }
 .example {
    display: inline-block;
    width: 182px;
-   margin: 28px 6px 8px 20px;
+   margin: 27px 11px 8px 20px;
    font-size: 14px;
    text-align: center;
    vertical-align: top;
@@ -414,7 +418,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-color: #3d8eb9;
     border-bottom: 16px solid #3ba8c0;
     font-size: 27px;
-    padding: 42px 0 38px 60px;
+    padding: 42px 40px 38px 60px;
 }
 .enter{
     display: inline-block;
@@ -505,7 +509,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     content: '';
     display: block;
     height: 80px;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 .footer{
     height: 77px;
@@ -513,10 +517,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     font-size: 14.1px;
     text-align: center; 
 }
+.footer_content{
+    position: relative;
+    margin: -3px auto 0;
+    vertical-align: middle;
+    width: 960px;
+}
 .lock{
     position: absolute;
-    left: 644px;
-    bottom: 16px;
+    display:block;
+    left: 31px;
+    top: -8px;
     width: 20px;
     height: 34px;
     background-image: url(image/sprite.png);
@@ -526,6 +537,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     background-position: 36px 36px;
 }
 .footer-text{
+    margin: 0 auto;
     margin-top: 33px;
 }
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1c667a+0,f6fafe+0,d8d8d8+0,f2f6fa+0,87aeba+28,1c667a+48,87aeba+71,f2f6fa+100 */

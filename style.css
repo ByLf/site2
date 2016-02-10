@@ -428,7 +428,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding: 0;
     margin: 13px 5px -1px 8px;
 }
-#Fio,#Email,#Message,.capchaImage,#capcha{
+.inputArea{
     display: block;
     border-radius: 3px;
     border: thin solid #48cbe8;  

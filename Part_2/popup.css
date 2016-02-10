@@ -1,4 +1,5 @@
 .bg-active{
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -6,8 +7,9 @@
     left: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(26, 67, 83, 0.76)
+    background-color: rgba(26, 67, 83, 0.76);
 }
+
 .passive{
     display: none;
 }
@@ -18,8 +20,7 @@
     background-color: #fad2d1;
     border: thin solid #f97e76;
 }
-
-#name, #soap, #text, #secretCode{
+.tooltype{
     font-size: 15px;
     font-family: 'FiraSans Book';
     color: white;
@@ -28,7 +29,7 @@
     padding: 2px 12px;
     height: 30px;
 }
-#name:after, #soap:before, #text:after, #secretCode:before{
+.left:after, .rigth:before{
     content: " ";
     display: block;
     position: absolute;
@@ -40,39 +41,108 @@
     border-style: solid;
     top: 0;
 }
-
-#name:after,#text:after{
-    border-left-width: 10px;
+.left:after{
+    border-left-width: 9px;
     border-right-color: transparent;
     right: -12px;
 }
-#soap:before, #secretCode:before{
-    border-right-width: 10px;
+.rigth:before{
+    border-right-width: 9px;
     border-left-color: transparent;
     left: -12px;
+}
+.rigth{
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.left{
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
 #name{
     top: 215px;
     right: 530px;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
 }
 #soap{
     top: 210px;
     left: 842px;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
 }
 #text{
     top:297px;
     right:533px;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
 }
 #secretCode{
     top:530px;
     left:847px;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+}
+
+.Addsite{
+   border-radius: 5px;
+   position: relative;
+   margin: 0 auto;
+   margin-top: 314px;
+   width: 362px;
+   background-color: #eff3f7;
+   padding-bottom: 54px;
+}
+.head{
+    font-family: "FiraSans Regular";
+    margin: 0;
+    font-weight: normal;
+    color: #f2f6fa;
+    background-color: #3d8eb9;
+    border-bottom: 10px solid #3ba8c0;
+    font-size: 29px;
+    padding: 5px 20px 4px 10px;
+}
+.blocks_form{
+    display: block;
+    font-family: "FiraSans Ligth";
+    font-size: 19px;
+    color: #87aeba;
+    padding: 0;
+    margin: 7px 21px 8px;
+}
+.button_add{
+    position: relative;
+    margin: 15px 111px;
+}
+.sub_add{
+    padding: 0px 28px;
+}
+
+#new_site{
+    height: 40px;
+    width: 320px;
+}
+#Err_site {
+    top: 93px;
+    right: 350px;
+}
+#new_image{
+    height: 40px;
+    width: 320px;
+}
+#Err_image{
+    top: 168px;
+    right: 350px;
+}
+#new_link{
+    height: 40px;
+    width: 320px;
+}
+#Err_link{
+    top: 243px;
+    right: 350px;
+}
+#new_definition{
+    height: 112px;
+    width: 320px;
+    padding-top: 10px;
+    resize: none;
+}
+#Err_definition{
+    top: 315px;
+    right: 350px;
 }

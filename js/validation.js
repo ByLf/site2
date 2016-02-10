@@ -14,8 +14,7 @@ var output = (function () {
     do {
         i++;
         popup[i] = popup[i - 1].nextElementSibling;
-    }
-        while (i < N && popup[N] !== null);
+    } while (i < N && popup[N] !== null);
     /*Создане массива с вывесками ошибок*/
     for (i = 0; i < N; i++) { Er[i] = true; }
     /*Создание массива с меткой правильности заполнения*/
@@ -23,12 +22,13 @@ var output = (function () {
         while (num !== 0 && (popup[num] === null || popup[num] === undefined)) {
             popup[num] = popup[num - 1];
         }
-        popup[num].className = 'active';
-        block[num].className = 'Error';
+        popup[num].classList.add('active');
+        block[num].classList.add('Error');
     }
     function Error_off(Num) {
         console.log(Num);
-        popup[Num].className = 'passive';
+        popup[Num].classList.remove('active');
+        popup[Num].classList.add('passive');
         block[Num].classList.remove('Error');
     }
     /*Функциии показывания/скрытия*/
@@ -40,7 +40,7 @@ var output = (function () {
                 trey = true,
                 str = block[k].value;
             for (v = 0; v < w; v++) {
-                if (str.indexOf(warning[v]) < 0) { trey = false;}
+                if (str.indexOf(warning[v]) >= 0) { trey = false; }
             }
             if (trey) {
                 for (v = 0; v < m; v++) {
@@ -50,40 +50,38 @@ var output = (function () {
                 }
             }
             return trey;
-        }
+        };
         /*Функция провеки наличия нужных символов*/
         if (Er[k] && block[k].value.length > 0 && sym_sint(k)) {
-            console.log(block[k].id + ' отправлено')
+            console.log(block[k].id + ' отправлено');
+        } else {
+            Error_on(k);
+            Er[k] = false;
         }
-            else {
-               Error_on(k);
-               Er[k] = false;
-                }
     }
     /*Функция проверки поля*/
     for (i = 0; i < N; i++) {
-      console.log(i);
-      block[i].onclick = function() {
-          console.log(Er[i] + ' - ' + i);
-          if (Er[i] === false) Error_off(i);
-      } //похоже, проблема в этом цикле. оно не делает переменную внутри. i остается внешней переменной...?!
+        console.log(i);
+        block[i].addEventListener('click', function () {
+            console.log(Er[i] + ' - ' + i);
+            if (Er[i] === false) { Error_off(i); }
+      }); //похоже, проблема в этом цикле. оно не делает переменную внутри. i остается внешней переменной...?!
     }
     /* Присвоение тултипам соотв. полей*/
     return {
         validation: function (e) {
-                    e.preventDefault();
-                    var p = 0;
-                    for (p = 0; p < N; p++) {
-                        valid(p);
-                        }
-                    }
-        clearAll: function (e) { //проблема здесь
-                         for (i = 0; i < N; i++) {
-                            if (!Er[i]) {Error_off(i);}
-                            }
-                    }
+            e.preventDefault();
+            var p = 0;
+            for (p = 0; p < N; p++) {
+                valid(p);
+            }
+        }, //запятая - это очень важно!
+        clearAll: function (e) {
+            for (i = 0; i < N; i++) {
+                if (!Er[i]) {Error_off(i); }
+            }
+        }
     };
 })();
-
 block.addEventListener('submit', output.validation, false);
-block.addEventListener('clear', output.clearAll, false);
+block.addEventListener('reset', output.clearAll, false);

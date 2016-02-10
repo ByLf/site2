@@ -5,11 +5,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="../fonts/font-face.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div id="name">Неверно указано имя</div>
-    <div id="soap">Вы не указали Email</div>
-    <div id="text">Ммм.... Что вы хотели этим сказать?</div>
-    <div id="secretCode">А вы не робот случаем?</div>
+   <div class="bg-active">
+       <div class="Addsite">
+           <h2 class="head">Добавление проекта</h2>
+            <form action="" id="newSite">
+                <div class="blocks_form">
+                    <label for="new_site">Название проекта</label>
+                    <input type="text" id="new_site" class="inputArea" placeholder="Введите название">
+                 </div>
+                <div class="blocks_form">
+                    <label for="new_image">Картинка проекта</label>
+                    <input type="text" id="new_image" class="inputArea" placeholder="Загрузите изображение">
+                  </div>
+                <div class="blocks_form">
+                    <label for="new_link">URL проекта</label>
+                    <input type="text" id="new_link" class="inputArea" placeholder="Добавьте ссылку">
+                  </div>
+                <div class="blocks_form">
+                    <label for="new_definition">Описание</label>
+                    <textarea id="new_definition" class="inputArea" placeholder="Пара слов о Вашем проекте"></textarea>
+                  </div>
+                <div class="button_add">
+                  <button type="submit" class="Submit Input">Добавить</button>
+                </div>
+            </form>
+       </div>
+       <div id="Err_site" class="passive tooltype left">Неправильное&nbsp;название&nbsp;проекта</div>
+       <div id="Err_image" class="passive tooltype left">Неправильные&nbsp;параметры&nbsp;изображения</div>
+       <div id="Err_link" class="passive tooltype left">Такой&nbsp;сайт&nbsp;точно&nbsp;сужествует?</div>
+       <div id="Err_definition" class="passive tooltype left">В&nbsp;описании&nbsp;закралась&nbsp;ошибка</div>
+   </div>
 </body>
 </html>

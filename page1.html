@@ -62,11 +62,11 @@
                 <h2 class="main my_work">Мои работы</h2>
                   <ul>
                        <li class="example">
-                         <a href="/Example/index.html" class="block">
+                         <a href="Example/index.html" class="block">
                            <span class="defenition">Тестовый макет</span>
                            <img class="site_image" src="image/site1.png" alt="">
                           </a>
-                         <a href="/Example/index.html" class="site">www.bazhalv.ru</a>
+                         <a href="Example/index.html" class="site">www.bazhalv.ru</a>
                          Тестовый макет этого сайта
                        </li>
                        <li class="example">
@@ -84,5 +84,35 @@
          <div class="footer-text">© 2016. Это мой сайт,  берите от него всё, что считаете полезным</div>
        </div>
     </footer>
+    <div id="darker" class="passive">
+       <div class="Addsite">
+           <h2 class="head">Добавление проекта</h2>
+            <form action="" id="newSite">
+                <div class="blocks_form">
+                    <label for="new_site">Название проекта</label>
+                    <input type="text" id="new_site" class="inputArea" placeholder="Введите название">
+                 </div>
+                <div class="blocks_form">
+                    <label for="new_image">Картинка проекта</label>
+                    <input type="text" id="new_image" class="inputArea" placeholder="Загрузите изображение">
+                  </div>
+                <div class="blocks_form">
+                    <label for="new_link">URL проекта</label>
+                    <input type="text" id="new_link" class="inputArea" placeholder="Добавьте ссылку">
+                  </div>
+                <div class="blocks_form">
+                    <label for="new_definition">Описание</label>
+                    <textarea id="new_definition" class="inputArea" placeholder="Пара слов о Вашем проекте"></textarea>
+                  </div>
+                <div class="button_add">
+                  <button type="submit" class="Submit Input sub_add">Добавить</button>
+                </div>
+            </form>
+       <div id="Err_site" class="passive tooltype left">Неправильное&nbsp;название&nbsp;проекта</div>
+       <div id="Err_image" class="passive tooltype left">Неправильные&nbsp;параметры&nbsp;изображения</div>
+       <div id="Err_link" class="passive tooltype left">Такой&nbsp;сайт&nbsp;точно&nbsp;сужествует?</div>
+       <div id="Err_definition" class="passive tooltype left">В&nbsp;описании&nbsp;закралась&nbsp;ошибка </div>
+       </div>
+   </div>
 </body>
 </html>

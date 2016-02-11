@@ -122,6 +122,26 @@
 .sub_add{
     padding: 0px 28px;
 }
+.label_image{
+    position: relative;
+    height: 40px;
+    width: 320px;
+    background-color: white;
+    padding-top: 10px;
+    overflow: hidden;
+    cursor: alias;
+}
+.label_image:before{
+    content: ' ';
+    margin-top: -10px;
+    display: block;
+    float: right;
+    height: 40px;
+    width: 40px;
+    background-color: #3ba8c0;
+    background-image: url(../image/sprite.png);
+    background-position: 123px 74px;
+}
 
 #new_site{
     height: 40px;
@@ -132,18 +152,11 @@
     right: 350px;
 }
 #new_image{
+    position: absolute;
+    cursor: alias;
+    opacity: 0;
     height: 40px;
     width: 320px;
-}
-#new_image:before{
-    content: ' ';
-    display: block;
-    float: right;
-    height: 40px;
-    width: 40px;
-    background-color: #3ba8c0;
-    background-image: url(../image/sprite.png);
-    background-position: 123px 74px;
 }
 #Err_image{
     top: 168px;

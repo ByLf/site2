@@ -76,18 +76,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .soc_network {
     display: inline-block;
+    height: 46px;
+    width: 46px;
+    background-color: #58697a;
+    margin-left: 21px;
 }
+.soc_network:first-child {margin-left: 0px; }
 .vk, .tw, .fb, .gh{
     background-image: url(image/sprite.png);
     background-repeat: no-repeat;
     display: block;
     height: 46px;
     width: 46px;
-    background-color: #58697a;
-    margin-left: 21px;
-    target:'blank';
     text-indent: 55px;
-    transform: background-color 2s ease 0s;
 }
 .vk:hover, .tw:hover, .fb:hover, .gh:hover{background-color: #3ba8c0;}
 .vk{background-position: 5px 4px;}
@@ -105,7 +106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     border-radius: 5px;
     overflow: hidden;
 }
-.vk, .tw, .fb, .gh, .photo{
+.soc_network, .photo{
     border-radius: 50%;
     overflow: hidden;
 }
@@ -168,6 +169,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding: 5px 20px 7px 41px;
     font-size: 17px;
     color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .malito:hover, .tel:hover, .skype:hover{
     text-decoration: underline;
@@ -237,7 +241,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .photo_into{
     height: 100%;
-} /*Стоит подумать как хоошенько оцентрировать его, сохраняя это свойство */
+}
 .about_me_line{
     display:inline-table;
     margin: 2.5px 18px 3.5px 0;

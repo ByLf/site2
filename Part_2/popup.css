@@ -42,12 +42,12 @@
     top: 0;
 }
 .left:after{
-    border-left-width: 9px;
+    border-left-width: 10px;
     border-right-color: transparent;
     right: -12px;
 }
 .rigth:before{
-    border-right-width: 9px;
+    border-right-width: 10px;
     border-left-color: transparent;
     left: -12px;
 }
@@ -79,6 +79,7 @@
 
 .Addsite{
    border-radius: 5px;
+   overflow: hidden;
    position: relative;
    margin: 0 auto;
    margin-top: 314px;
@@ -95,6 +96,16 @@
     border-bottom: 10px solid #3ba8c0;
     font-size: 29px;
     padding: 5px 20px 4px 10px;
+}
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 28px;
+    width: 28px;
+    background-image: url(../image/sprite.png);
+    background-position: 117px 30px;
+    cursor: pointer;
 }
 .blocks_form{
     display: block;
@@ -123,6 +134,16 @@
 #new_image{
     height: 40px;
     width: 320px;
+}
+#new_image:before{
+    content: ' ';
+    display: block;
+    float: right;
+    height: 40px;
+    width: 40px;
+    background-color: #3ba8c0;
+    background-image: url(../image/sprite.png);
+    background-position: 123px 74px;
 }
 #Err_image{
     top: 168px;

@@ -10,6 +10,7 @@ ul{
 }
 html{
     font-family: 'FiraSans Book', sans-serif;
+    height: 100%;
 }
 html,body{
     height: 100%;
@@ -397,6 +398,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     color: #3d8eb9;
     font-size: 13px;
     text-align: center;
+    cursor: pointer;
 }
 .addimage{
     background-image: url(image/sprite.png);

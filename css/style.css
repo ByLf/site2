@@ -60,7 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .logo {
     display: inline-block;
-    background-image: url(image/Logo-a.png);
+    background-image: url(../image/Logo-a.png);
     height: 40px;
     width: 244px;
     transition: all 2s ease 0s;
@@ -83,7 +83,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .soc_network:first-child {margin-left: 0px; }
 .vk, .tw, .fb, .gh{
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-repeat: no-repeat;
     display: block;
     height: 46px;
@@ -189,18 +189,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }/*Любопытно: при установке display: inline-block; текст прескакивает на новую строку. даже если обнулить границы */
 .malito{background-color: #41b9d4;}
 .malito:before{
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: 75px 95px;
-    
+
 }
 .tel{background-color: #48cbe8;}
 .tel:before{
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: 76px 66px;
 }
 .skype{background-color: #51daf8;}
 .skype:before{
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: 76px 30px;
 }
 
@@ -255,7 +255,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .Skil {
     display: inline-block;
-    float: right; 
+    float: right;
     width: 198px;
     margin-top: 9px;
 }
@@ -267,7 +267,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
    border-radius: 2px;
    margin: 1px 3px 0px 1px;
    color: white;
-   background-image: url(image/skils.png);
+   background-image: url(../image/skils.png);
    background-repeat: repeat-x;
    overflow: hidden;
 }
@@ -276,7 +276,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     font-family: 'FiraSans Book';
     font-size: 17px;
     margin-bottom: -4px;
-    
+
 }
 .info_past{
     margin-top: 22px;
@@ -288,7 +288,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     padding-top: -2px;
     padding-bottom: 19px;
     padding-left: 124px;
-    font-family: "FiraSans Ligth";
+    font-family: "FiraSans Light";
     font-size: 15px;
 }
 .work:before{
@@ -302,7 +302,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-top: -7px;
     height: 40px;
     width: 40px;
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: -5px -117px;
 }
 .learn:before{
@@ -316,7 +316,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-top: -9px;
     height: 30px;
     width: 42px;
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: -3px -88px;
 }
 .list:before{
@@ -330,7 +330,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     margin-top: -10px;
     height: 41px;
     width: 33px;
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: -8px -47px;
 }
 .past{
@@ -340,7 +340,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 
 .page1{
    height: 100%;
-   width: 100%; 
+   width: 100%;
    background-color: #eff3f7;
    font-size: 0px;
    padding-bottom: 40px;
@@ -405,7 +405,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     cursor: pointer;
 }
 .addimage{
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: -57px -41px;
     width: 32px;
     height: 32px;
@@ -428,7 +428,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .enter{
     display: inline-block;
-    font-family: "FiraSans Ligth";
+    font-family: "FiraSans Light";
     font-size: 19px;
     color: #87aeba;
     padding: 0;
@@ -437,12 +437,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 .inputArea{
     display: block;
     border-radius: 3px;
-    border: thin solid #48cbe8;  
-    font-family: "FiraSans Ligth";
+    border: thin solid #48cbe8;
+    font-family: "FiraSans Light";
     color: #48cbe8;
     font-size: 14px;
     padding-left: 8px;
-    margin-top: 4px;
+    margin-top: -3px;
 }
 #Fio{
     height: 41px;
@@ -508,7 +508,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 
 .wrap {
-    min-height: 100%; 
+    min-height: 100%;
     margin-bottom: -80px;
 }
 .wrap:after {
@@ -519,9 +519,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
 }
 .footer{
     height: 77px;
-    font-family: 'FiraSans Ligth';
+    font-family: 'FiraSans Light';
     font-size: 14.1px;
-    text-align: center; 
+    text-align: center;
 }
 .footer_content{
     position: relative;
@@ -536,7 +536,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     top: -8px;
     width: 20px;
     height: 34px;
-    background-image: url(image/sprite.png);
+    background-image: url(../image/sprite.png);
     background-position: 36px 77px;
 }
 .lock:hover{

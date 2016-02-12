@@ -3,6 +3,7 @@
         area = [],
         Num,
         tooltip_error = doc.getElementById('tooltip_Error').children,
+        /* Общая функция проверки*/
         _validation = function (e) {
             e.preventDefault();
             _getNumderOfInput(e.target);
@@ -17,12 +18,13 @@
                 }
             }
         },
+        /*Вычисляет количество текстовых полей и объединяет их с тултипами в объект*/
         _getNumderOfInput = function (Form) {
             var i = 0,
                 length = Form.length;
             Num = 0;
             for (i = 0; i < length; i++) {
-                if (Form[i].type === 'text' || Form[i].type === 'textarea') {
+                if (Form[i].type === 'text' || Form[i].type === 'textarea' || Form[i].type === 'file') {
                     area[Num] = {};
                     area[Num].form = Form[i];
                     area[Num].checkError = true;
@@ -32,10 +34,12 @@
                 }
             }
         },
+        /*Проверяет на наличие строки*/
         _checkNullString = function (value) {
             if (value.length < 1 || value == ' ') { return false; }
                 else {return true; }
         },
+        /*Ищет запрещенные символы/строки */
         _searchDangerousSymbol = function (value) {
             var i = 0,
                 inspect = true,
@@ -49,6 +53,7 @@
             }
             return inspect;
         },
+        /*Дополнительно: ищет обязательные в строке символы*/
         _searchNeedingSymbol = function (value, symbols) {
             var i = 0,
                 inspect = true,
@@ -61,6 +66,7 @@
             }
             return inspect;
         },
+        /*Выводит сообщение об ошибке*/
         _showError = function (Num) {
             while (Num !== 0 && area[Num].tooltip == null) {
                 area[Num].tooltip = area[Num - 1].tooltip;
@@ -74,6 +80,7 @@
             area[Num].form
                 .classList.add('Error');
         },
+        /*Убирает сообщение об ошибке при клике*/
         _clickErrorForm = function (e) {
             var i = 0,
                 form = e.target;
@@ -82,6 +89,7 @@
             }
             _hideError(i);
         },
+        /*Сама функция сокрытия сообщения об ошибке*/
         _hideError = function (Num) {
             area[Num].checkError = true;
             area[Num].tooltip
@@ -91,6 +99,7 @@
             area[Num].form
                 .classList.remove('Error');
         },
+        /*Добавляет к стандартному "обнулению" форм еще и обнуление ошибок*/
         _reset = function () {
             var i = 0;
             for (i = 0; i < Num; i++) {

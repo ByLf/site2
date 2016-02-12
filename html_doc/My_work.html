@@ -5,11 +5,11 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width" name="viewport">
     <title>Мои работы</title>
-    <link rel="icon" type="image/png" href="image/logo.png">
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="fonts/font-face.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Part_2/popup.css">
+    <link rel="icon" type="image/png" href="../image/logo.png">
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="../css/font-face.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <!--[if lt IE 9]>
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
@@ -19,13 +19,12 @@
    <header class="header">
        <a href="http://loftschool.com/" class="logo"
     target='_blank'>
-          <img class="Logo" src="image/logo-p.png" alt="LoftSchool">
+          <img class="Logo" src="../image/logo-p.png" alt="LoftSchool">
          </a>
         <ul class="soc_net">
             <li class="soc_network"><a href="https://vk.com/bazhalv" class="vk"
     target='_blank'>Вконтакте</a></li>
-            <li class="soc_network"><a href="" class="tw"
-    target='_blank'>Twitter</a></li>
+            <li class="soc_network"><a href="" class="tw" >Twitter</a></li>
             <li class="soc_network"><a href="https://www.facebook.com/transcend.flash?ref=bookmarks" class="fb"
     target='_blank'>Facebook</a></li>
             <li class="soc_network"><a href="https://github.com/ByLf" class="gh"
@@ -47,9 +46,9 @@
         <aside class="aside">
             <div class="menu">
                 <ul>
-                    <li><a class="nav" href="index.html">Обо мне</a></li>
-                    <li><a class="nav" href="page1.html">Мои работы</a></li>
-                    <li><a class="nav" href="page2.html">Связаться со мной</a></li>
+                    <li><a class="nav" href="../index.html">Обо мне</a></li>
+                    <li><a class="now" href="My_work.html">Мои работы</a></li>
+                    <li><a class="NaV" href="feedback.html">Связаться со мной</a></li>
                 </ul>
             </div>
             <div class="contact">
@@ -58,8 +57,8 @@
                     <li><a class="malito" href="mailto:transcend.flash@mail.ru">transcend.flash@mail.ru</a></li>
                     <li><a class="tel" href="tel:+79685734787">+79685734787</a></li>
                     <li><a class="skype" href="skype:bazhalv">bazhalv</a></li>
-                </ul> 
-                
+                </ul>
+
             </div>
         </aside>
         <div class="content">
@@ -67,21 +66,12 @@
                 <h2 class="main my_work">Мои работы</h2>
                   <ul>
                        <li class="example">
-                         <a href="Example/index.html" class="block">
-                           <span class="defenition">Тестовый макет</span>
-                           <img class="site_image" src="image/site1.png" alt="">
-                          </a>
-                         <a href="Example/index.html" class="site">www.bazhalv.ru</a>
-                         Тестовый макет этого сайта
-                       </li>
-                       <li class="example">
                        <div class="newproject"><div class="addimage"></div> Добавить проект</div>
                         </li>
                  </ul>
             </section>
         </div>
     </div>
-    <script type="text/javascript" src="js/menu.js"></script>
     </div>
     <footer class="footer">
         <div class="footer_content">
@@ -100,7 +90,7 @@
                  </div>
                 <div class="blocks_form">
                     <label for="new_image">Картинка проекта</label>
-                    <label for="new_image" class="inputArea label_image">Загрузите изображение<input type='file' id="new_image"></label>
+                    <label for="new_image" class="inputArea label_image"> Загрузите изображение <input type='file' id="new_image"></label>
                   </div>
                 <div class="blocks_form">
                     <label for="new_link">URL проекта</label>
@@ -114,12 +104,15 @@
                   <button type="submit" class="Submit Input sub_add">Добавить</button>
                 </div>
             </form>
-       <div id="Err_site" class="passive tooltype left">Неправильное&nbsp;название&nbsp;проекта</div>
-       <div id="Err_image" class="passive tooltype left">Неправильные&nbsp;параметры&nbsp;изображения</div>
-       <div id="Err_link" class="passive tooltype left">Такой&nbsp;сайт&nbsp;точно&nbsp;сужествует?</div>
-       <div id="Err_definition" class="passive tooltype left">В&nbsp;описании&nbsp;закралась&nbsp;ошибка </div>
+            <div id="tooltip_Error">
+               <div id="Err_site" class="passive tooltype left">Неправильное&nbsp;название&nbsp;проекта</div>
+               <div id="Err_image" class="passive tooltype left">Неправильные&nbsp;параметры&nbsp;изображения</div>
+               <div id="Err_link" class="passive tooltype left">Такой&nbsp;сайт&nbsp;точно&nbsp;сужествует?</div>
+               <div id="Err_definition" class="passive tooltype left">В&nbsp;описании&nbsp;закралась&nbsp;ошибка </div>
+           </div>
        </div>
    </div>
+   <script type="text/javascript" src="js/validation-ver-2.js"></script>
    <script type="text/javascript" src="js/add_site.js"></script>
 </body>
 </html>

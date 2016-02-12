@@ -1,4 +1,4 @@
-
+//Добро пожаловать в мир костылей!
 
 (function () {
     var doc = document,
@@ -14,13 +14,24 @@
         background.classList.add('passive');
         background.classList.remove('bg-active');
     }
-    function _submit(e) {
-        //отправляет данные
-        e.preventDefault;
-        console.log('sucses');
-    }
-    function _addImg() {
+    function _changeInputOfFile() {
+        var file = this.value,
+            illusion = this.offsetParent,
+            htmlOfillusion = illusion.innerHTML,
+            numder;
+        illusion.classList.add('Error');
+        if (this.className.indexOf('Error') >= 0) {
+            illusion.classList.add('Error');
+        }
+            else {
+                illusion.classList.remove('Error');
+            }
+        if (file) {
+            numder = htmlOfillusion.indexOf('<');
+            htmlOfillusion = file + htmlOfillusion.substring(numder);
+                  }
         //добавление файла изображения
+        //нужно добавтить реакцию на изменение, интересно, сработает ли?
     }
     function _getComplete() {
         // выводит сообщение о завершении
@@ -28,16 +39,9 @@
     function _getFatalError() {
         // выводит сообщение об ошибке
     }
-    //код, объявляющий функцию вне модуля
-    /*addSite.hide = hide;
-    addSite.submit = submit;
-    addSite.img = addImg;
-    addSite.complete = complete;
-    addSite.err = fatalError;
-    window.addSite = addSite;*/
-
 //Далее применяются настолько грязные костыли, чтоих нужно смотреть тольо с закрытыми глазами
     doc.getElementsByClassName('newproject')[0].addEventListener('click', addSite);
     doc.getElementsByClassName('close')[0].addEventListener('click', _hide);
-    doc.addEventListener('submit', _submit);
+    doc.getElementById('new_image').addEventListener('change', _changeInputOfFile);
+
 })();

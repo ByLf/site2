@@ -4,30 +4,33 @@
     var doc = document,
         background = document.getElementById('darker'),
         placeInputImage = doc.getElementById('new_image');
-    function addSite(e) {
+
         //открывает окно добавления
-        e.preventDefault;
+    function addSite(e) {
         background.classList.add('bg-active');
         background.classList.remove('passive');
     }
-    function _hide() {
         //скрывает окно
+    function _hide() {
         background.classList.add('passive');
         background.classList.remove('bg-active');
     }
+    /*функция для изменения текста поля для отправк изображения*/
     function _changeInputOfFile() {
         var file = this.value,
-            htmlOfillusion = this.offsetParent.innerHTML,
+            textInputImage = this.previousSibling.textContent,
             numder;
-        if (file) {
-            numder = htmlOfillusion.indexOf('<');
-            this.offsetParent.innerHTML = file + htmlOfillusion.substring(numder);
         console.dir(file);
-            this.value = file;
-        }//WARNING: не отображает имя при перезагрузке страницы: проблема в кэше. Возможно, решаемо при вынесении функции за модуль
+        if (file) {
+            numder = file.lastIndexOf('/') + 1;
+            if (numder > 0) {
+                file = file.substring(numder);
+            }//я не понимаю пчему не работает
+            this.previousSibling.textContent = file;
+        }
     }
+    /* Отдельная функция для обработки поля с отправкой изображения, запускается при отправе формы*/
     function _submitImage(e) {
-        e.preventDefault;
         var i = 0,
             form = e.target,
             inputImage;
@@ -36,10 +39,10 @@
         }
         inputImage = form[i];
         if (inputImage.value == "") {
-            console.dir(inputImage);
             _turnOnClassError(inputImage);
         }
     }
+    /*функция для "окрашивания" поля*/
     function _turnOnClassError(inputImage) {
         inputImage.offsetParent.classList.add('Error');
     }

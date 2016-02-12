@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/popup.css">
     <!--[if lt IE 9]>
+        <script type="text/javascript" src="../bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
 </head>
@@ -82,7 +83,7 @@
     <div id="darker" class="passive">
        <div class="Addsite">
            <h2 class="head">Добавление проекта</h2>
-           <div class="close"></div>
+           <div id="close"></div>
             <form action="" id="newSite">
                 <div class="blocks_form">
                     <label for="new_site">Название проекта</label>
@@ -90,7 +91,7 @@
                  </div>
                 <div class="blocks_form">
                     <label for="new_image">Картинка проекта</label>
-                    <label for="new_image" class="inputArea label_image"> Загрузите изображение <input type='file' id="new_image"></label>
+                    <div for="new_image" class="inputArea label_image"> Загрузите изображение <input type='file' id="new_image"></div>
                   </div>
                 <div class="blocks_form">
                     <label for="new_link">URL проекта</label>
@@ -112,7 +113,13 @@
            </div>
        </div>
    </div>
-   <script type="text/javascript" src="js/validation-ver-2.js"></script>
-   <script type="text/javascript" src="js/add_site.js"></script>
+   <script type="text/javascript" src="../js/validation-ver-2.js"></script>
+   <script type="text/javascript" src="../js/add_site.js"></script>
+
+    <!--[if lt IE 9]>
+        <script>
+            $('input, textarea').placeholder();
+        </script>
+    <![endif]-->
 </body>
 </html>

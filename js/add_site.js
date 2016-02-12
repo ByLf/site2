@@ -2,7 +2,8 @@
 
 (function () {
     var doc = document,
-        background = document.getElementById('darker');
+        background = document.getElementById('darker'),
+        placeInputImage = doc.getElementById('new_image');
     function addSite(e) {
         //открывает окно добавления
         e.preventDefault;
@@ -16,22 +17,34 @@
     }
     function _changeInputOfFile() {
         var file = this.value,
-            illusion = this.offsetParent,
-            htmlOfillusion = illusion.innerHTML,
+            htmlOfillusion = this.offsetParent.innerHTML,
             numder;
-        illusion.classList.add('Error');
-        if (this.className.indexOf('Error') >= 0) {
-            illusion.classList.add('Error');
-        }
-            else {
-                illusion.classList.remove('Error');
-            }
         if (file) {
             numder = htmlOfillusion.indexOf('<');
-            htmlOfillusion = file + htmlOfillusion.substring(numder);
-                  }
-        //добавление файла изображения
-        //нужно добавтить реакцию на изменение, интересно, сработает ли?
+            this.offsetParent.innerHTML = file + htmlOfillusion.substring(numder);
+        console.dir(file);
+            this.value = file;
+        }//WARNING: не отображает имя при перезагрузке страницы: проблема в кэше. Возможно, решаемо при вынесении функции за модуль
+    }
+    function _submitImage(e) {
+        e.preventDefault;
+        var i = 0,
+            form = e.target,
+            inputImage;
+        while (form[i].type !== 'file') {
+            i++;
+        }
+        inputImage = form[i];
+        if (inputImage.value == "") {
+            console.dir(inputImage);
+            _turnOnClassError(inputImage);
+        }
+    }
+    function _turnOnClassError(inputImage) {
+        inputImage.offsetParent.classList.add('Error');
+    }
+    function _turnOffClassError() {
+        this.offsetParent.classList.remove('Error');
     }
     function _getComplete() {
         // выводит сообщение о завершении
@@ -41,7 +54,9 @@
     }
 //Далее применяются настолько грязные костыли, чтоих нужно смотреть тольо с закрытыми глазами
     doc.getElementsByClassName('newproject')[0].addEventListener('click', addSite);
-    doc.getElementsByClassName('close')[0].addEventListener('click', _hide);
-    doc.getElementById('new_image').addEventListener('change', _changeInputOfFile);
-
+    doc.getElementById('close').addEventListener('click', _hide);
+    placeInputImage.addEventListener('change', _changeInputOfFile);
+    /* КАСТЫЛЬ*/
+    placeInputImage.addEventListener('click', _turnOffClassError);
+    doc.addEventListener('submit', _submitImage);
 })();

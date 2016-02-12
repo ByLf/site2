@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/font-face.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
+        <script type="text/javascript" src="bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
 </head>
@@ -100,5 +101,11 @@
          <div class="footer-text">© 2016. Это мой сайт,  берите от него всё, что считаете полезным</div>
        </div>
     </footer>
+
+    <!--[if lt IE 9]>
+        <script>
+            $('input, textarea').placeholder();
+        </script>
+    <![endif]-->
 </body>
 </html>

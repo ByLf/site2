@@ -17,7 +17,7 @@ html,body{
     margin: 0;
 }
 body {
-    background: url(image/comppattern2.png);
+    background: url(../image/comppattern2.png);
 }/*остатки тегового стиля.*/
 .clearfix:after {
 content: ".";
@@ -438,6 +438,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c667a', end
     display: block;
     border-radius: 3px;
     border: thin solid #48cbe8;
+    background-color: white;
     font-family: "FiraSans Light";
     color: #48cbe8;
     font-size: 14px;
